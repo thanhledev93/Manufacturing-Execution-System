@@ -9,8 +9,6 @@ import pageObjects.BaseObjectPage;
 import pageObjects.MaintenancePlanningSystem.MP_MainTablePage;
 import pageObjects.MaintenancePlanningSystem.MP_SearchFormPage;
 
-import java.util.List;
-
 
 public class DeleteMPStepDefs extends BaseClass {
     public DeleteMPStepDefs() {

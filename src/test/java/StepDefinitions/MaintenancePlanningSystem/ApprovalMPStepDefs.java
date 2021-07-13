@@ -1,11 +1,9 @@
 package StepDefinitions.MaintenancePlanningSystem;
 
 import StepDefinitions.BaseClass;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.JavascriptExecutor;
 import pageObjects.BaseObjectPage;
 import pageObjects.MaintenancePlanningSystem.MP_MainTablePage;
 import pageObjects.MaintenancePlanningSystem.MP_MaintenancePlanningFormPage;

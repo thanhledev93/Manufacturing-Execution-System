@@ -11,8 +11,6 @@ import pageObjects.MaintenancePlanningSystem.MP_MainTablePage;
 import pageObjects.MaintenancePlanningSystem.MP_MaintenancePlanningFormPage;
 import pageObjects.MaintenancePlanningSystem.MP_SearchFormPage;
 
-import java.util.List;
-
 
 public class CreateMPStepDefs extends BaseClass {
     public CreateMPStepDefs() {

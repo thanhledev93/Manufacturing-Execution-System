@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.mesproject</groupId>
-    <artifactId>MES_PROJECT</artifactId>
+    <groupId>mes.selenium</groupId>
+    <artifactId>Manufacturing-Execution-System</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -96,7 +96,7 @@
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <projectName>MES_PROJECT</projectName>
+                            <projectName>Manufacturing-Execution-System</projectName>
                             <outputDirectory>${project.build.directory}/cucumber-report-html</outputDirectory>
                             <cucumberOutput>${project.build.directory}/cucumber.json</cucumberOutput>
                         </configuration>
