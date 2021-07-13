@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/reporting.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber-JVM Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber-JVM Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="feature-overview.html">Features</a></li>
+        <li role="presentation" ><a href="tag-overview.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="step-overview.html">Steps</a></li>
+        <li role="presentation" ><a href="failures-overview.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid" id="build-info">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-1">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Project</th>
+                          <th>Number</th>
+                        <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="info">
+            <td>MES_PROJECT</td>
+                          <td>1</td>
+                        <td>01 Jul 2021, 08:29</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div id="report-lead" class="container-fluid>
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h2>Steps Statistics</h2>
+              <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+          </div>
+  </div>
+</div>
+
+<div class="container-fluid" id="summary">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+              <table id="tablesorter" class="stats-table table-hover">
+
+          <thead>
+            <tr class="header">
+              <th>Implementation</th>
+              <th>Occurrences</th>
+              <th>Duration</th>
+              <th>Average</th>
+              <th>Ratio</th>
+            </tr>
+          </thead>
+
+          <tbody>
+                          <tr>
+                <td class="location">StepDefinitions.Auth.LoginStepDefs.close_browser()</td>
+                <td>22</td>
+                <td class="duration" data-value="9012102700">9s 012ms</td>
+                <td class="duration" data-value="409641031">409ms</td>
+                <td class="failed">54.55%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.Hooks.AfterTest(io.cucumber.java.Scenario)</td>
+                <td>22</td>
+                <td class="duration" data-value="11004140400">11s 004ms</td>
+                <td class="duration" data-value="500188200">500ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.Hooks.BeforeTest()</td>
+                <td>22</td>
+                <td class="duration" data-value="37137402400">37s 137ms</td>
+                <td class="duration" data-value="1688063745">1s 688ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.MaintenancePlanningSystem.DeleteMaintenancePlanningSystemStepDefs.user_click_on_no_button()</td>
+                <td>2</td>
+                <td class="duration" data-value="263110900">263ms</td>
+                <td class="duration" data-value="131555450">131ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.MaintenancePlanningSystem.SearchMaintenancePlanningSystemStepDefs.user_is_on_page_with_account(java.lang.String,java.lang.String)</td>
+                <td>22</td>
+                <td class="duration" data-value="83685043500">1m 23s 685ms</td>
+                <td class="duration" data-value="3803865613">3s 803ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.QualityControlPoints.CreateQualityChecklistStepDefs.open_create_checklist_form()</td>
+                <td>4</td>
+                <td class="duration" data-value="220350900">220ms</td>
+                <td class="duration" data-value="55087725">055ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.QualityControlPoints.CreateQualityChecklistStepDefs.user_click_on_create_checklist_button()</td>
+                <td>6</td>
+                <td class="duration" data-value="1808870600">1s 808ms</td>
+                <td class="duration" data-value="301478433">301ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.QualityControlPoints.CreateQualityChecklistStepDefs.user_click_on_save_button_in_quality_config_detail_form()</td>
+                <td>6</td>
+                <td class="duration" data-value="407098800">407ms</td>
+                <td class="duration" data-value="67849800">067ms</td>
+                <td class="failed">50.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.QualityControlPoints.CreateQualityChecklistStepDefs.user_enter_content_as(java.lang.String)</td>
+                <td>1</td>
+                <td class="duration" data-value="204042900">204ms</td>
+                <td class="duration" data-value="204042900">204ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.QualityControlPoints.CreateQualityChecklistStepDefs.user_enters_quality_standards()</td>
+                <td>2</td>
+                <td class="duration" data-value="4816756200">4s 816ms</td>
+                <td class="duration" data-value="2408378100">2s 408ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.QualityControlPoints.CreateQualityChecklistStepDefs.user_should_found_content_just_created_success_in_the_table()</td>
+                <td>1</td>
+                <td class="duration" data-value="522637500">522ms</td>
+                <td class="duration" data-value="522637500">522ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.QualityControlPoints.CreateQualityChecklistStepDefs.user_should_not_found_content_just_created_success_in_the_table()</td>
+                <td>1</td>
+                <td class="duration" data-value="1054826400">1s 054ms</td>
+                <td class="duration" data-value="1054826400">1s 054ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.QualityControlPoints.CreateQualityControlPointsStepDefs.close_alert_message()</td>
+                <td>10</td>
+                <td class="duration" data-value="44364948500">44s 364ms</td>
+                <td class="duration" data-value="4436494850">4s 436ms</td>
+                <td class="failed">60.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.QualityControlPoints.CreateQualityControlPointsStepDefs.display_alert_message_as(java.lang.String)</td>
+                <td>12</td>
+                <td class="duration" data-value="14985489000">14s 985ms</td>
+                <td class="duration" data-value="1248790750">1s 248ms</td>
+                <td class="failed">66.67%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.QualityControlPoints.CreateQualityControlPointsStepDefs.display_alert_message_as_for_required_values(java.lang.String)</td>
+                <td>6</td>
+                <td class="duration" data-value="14430345400">14s 430ms</td>
+                <td class="duration" data-value="2405057566">2s 405ms</td>
+                <td class="failed">33.33%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.QualityControlPoints.CreateQualityControlPointsStepDefs.open_create_quality_cp_form()</td>
+                <td>3</td>
+                <td class="duration" data-value="181470500">181ms</td>
+                <td class="duration" data-value="60490166">060ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.QualityControlPoints.CreateQualityControlPointsStepDefs.user_click_on_close_button()</td>
+                <td>1</td>
+                <td class="duration" data-value="111697500">111ms</td>
+                <td class="duration" data-value="111697500">111ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.QualityControlPoints.CreateQualityControlPointsStepDefs.user_click_on_confirm_button()</td>
+                <td>8</td>
+                <td class="duration" data-value="510138800">510ms</td>
+                <td class="duration" data-value="63767350">063ms</td>
+                <td class="failed">50.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.QualityControlPoints.CreateQualityControlPointsStepDefs.user_click_on_create_quality_cp_button()</td>
+                <td>5</td>
+                <td class="duration" data-value="1130129900">1s 130ms</td>
+                <td class="duration" data-value="226025980">226ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.QualityControlPoints.CreateQualityControlPointsStepDefs.user_click_on_save_button()</td>
+                <td>3</td>
+                <td class="duration" data-value="308075800">308ms</td>
+                <td class="duration" data-value="102691933">102ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.QualityControlPoints.CreateQualityControlPointsStepDefs.user_enter_name_quality_cp_and_note()</td>
+                <td>2</td>
+                <td class="duration" data-value="901454300">901ms</td>
+                <td class="duration" data-value="450727150">450ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.QualityControlPoints.CreateQualityControlPointsStepDefs.user_enter_name_quality_cp_as(java.lang.String)</td>
+                <td>1</td>
+                <td class="duration" data-value="240571100">240ms</td>
+                <td class="duration" data-value="240571100">240ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.QualityControlPoints.CreateQualityControlPointsStepDefs.user_should_found_quality_cp_in_quality_cp_field()</td>
+                <td>1</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.QualityControlPoints.CreateQualityControlPointsStepDefs.user_should_not_found_quality_cp_in_quality_cp_field()</td>
+                <td>1</td>
+                <td class="duration" data-value="15435797600">15s 435ms</td>
+                <td class="duration" data-value="15435797600">15s 435ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.QualityControlPoints.DeleteQualityChecklistStepDefs.user_choose_content_of_checklist_and_click_on_function_button_and_choose_delete()</td>
+                <td>2</td>
+                <td class="duration" data-value="726471000">726ms</td>
+                <td class="duration" data-value="363235500">363ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.QualityControlPoints.DeleteQualityChecklistStepDefs.user_should_found_content_of_checklist_in_table()</td>
+                <td>1</td>
+                <td class="duration" data-value="507205900">507ms</td>
+                <td class="duration" data-value="507205900">507ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.QualityControlPoints.DeleteQualityChecklistStepDefs.user_should_not_found_content_of_checklist_in_table()</td>
+                <td>1</td>
+                <td class="duration" data-value="1291772700">1s 291ms</td>
+                <td class="duration" data-value="1291772700">1s 291ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.QualityControlPoints.DeleteQualityControlPointsStepDefs.item_has_quality_cp(java.lang.String)</td>
+                <td>2</td>
+                <td class="duration" data-value="6904372600">6s 904ms</td>
+                <td class="duration" data-value="3452186300">3s 452ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.QualityControlPoints.DeleteQualityControlPointsStepDefs.user_click_on_delete_quality_cp_button()</td>
+                <td>2</td>
+                <td class="duration" data-value="434168200">434ms</td>
+                <td class="duration" data-value="217084100">217ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.QualityControlPoints.DeleteQualityControlPointsStepDefs.user_click_on_yes_button()</td>
+                <td>2</td>
+                <td class="duration" data-value="282715600">282ms</td>
+                <td class="duration" data-value="141357800">141ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.QualityControlPoints.DeleteQualityControlPointsStepDefs.user_should_found_deleted_quality_cp_in_quality_cp_field()</td>
+                <td>1</td>
+                <td class="duration" data-value="1644113100">1s 644ms</td>
+                <td class="duration" data-value="1644113100">1s 644ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.QualityControlPoints.DeleteQualityControlPointsStepDefs.user_should_not_found_deleted_quality_cp_in_quality_cp_field()</td>
+                <td>1</td>
+                <td class="duration" data-value="999000">000ms</td>
+                <td class="duration" data-value="999000">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.QualityControlPoints.ReadQualityChecklistStepDefs.close_quality_config_detail_form()</td>
+                <td>1</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.QualityControlPoints.ReadQualityChecklistStepDefs.fields_are_loaded_by_default(io.cucumber.datatable.DataTable)</td>
+                <td>1</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.QualityControlPoints.ReadQualityChecklistStepDefs.open_quality_config_detail_form()</td>
+                <td>5</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.QualityControlPoints.ReadQualityChecklistStepDefs.read_only_fields()</td>
+                <td>1</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.QualityControlPoints.ReadQualityChecklistStepDefs.user_choose_content_of_checklist_and_click_on_feature_button_and_choose_view()</td>
+                <td>1</td>
+                <td class="duration" data-value="1001400">001ms</td>
+                <td class="duration" data-value="1001400">001ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.QualityControlPoints.ReadQualityChecklistStepDefs.user_click_on_close_button_in_quality_config_detail_form()</td>
+                <td>3</td>
+                <td class="duration" data-value="177581700">177ms</td>
+                <td class="duration" data-value="59193900">059ms</td>
+                <td class="failed">33.33%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.QualityControlPoints.ReadQualityChecklistStepDefs.user_has_content_of_checklist_as(java.lang.String)</td>
+                <td>5</td>
+                <td class="duration" data-value="4080786300">4s 080ms</td>
+                <td class="duration" data-value="816157260">816ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.QualityControlPoints.ReadQualityChecklistStepDefs.user_has_quality_checklist_for_item(java.lang.String)</td>
+                <td>11</td>
+                <td class="duration" data-value="44495377700">44s 495ms</td>
+                <td class="duration" data-value="4045034336">4s 045ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.QualityControlPoints.SearchQualityControlPointsStepDefs.user_click_on_item_field_and_choose_item_as(java.lang.String)</td>
+                <td>7</td>
+                <td class="duration" data-value="14309066600">14s 309ms</td>
+                <td class="duration" data-value="2044152371">2s 044ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.QualityControlPoints.SearchQualityControlPointsStepDefs.user_click_on_quality_cp_field_and_choose_quality_cp_as(java.lang.String)</td>
+                <td>1</td>
+                <td class="duration" data-value="1560428400">1s 560ms</td>
+                <td class="duration" data-value="1560428400">1s 560ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.QualityControlPoints.SearchQualityControlPointsStepDefs.user_should_found_quality_checklist_in_the_table()</td>
+                <td>1</td>
+                <td class="duration" data-value="29937600">029ms</td>
+                <td class="duration" data-value="29937600">029ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.QualityControlPoints.SearchQualityControlPointsStepDefs.user_should_not_found_quality_checklist_in_the_table()</td>
+                <td>1</td>
+                <td class="duration" data-value="7077161800">7s 077ms</td>
+                <td class="duration" data-value="7077161800">7s 077ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.QualityControlPoints.UpdateQualityChecklistStepDefs.user_choose_content_of_checklist_and_click_on_feature_button_and_choose_update()</td>
+                <td>4</td>
+                <td class="duration" data-value="995600">000ms</td>
+                <td class="duration" data-value="248900">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.QualityControlPoints.UpdateQualityChecklistStepDefs.user_should_found_content_just_updated_success_in_the_table()</td>
+                <td>1</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.QualityControlPoints.UpdateQualityChecklistStepDefs.user_should_not_found_content_just_updated_success_in_the_table()</td>
+                <td>1</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.QualityControlPoints.UpdateQualityChecklistStepDefs.user_update_content(io.cucumber.datatable.DataTable)</td>
+                <td>4</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="failed">0.00%</td>
+              </tr>
+                      </tbody>
+
+          <tfoot class="total">
+            <tr>
+              <td>48</td>
+              <td>224</td>
+              <td class="duration">5m 26s 260ms</td>
+              <td class="duration">1s 456ms</td>
+              <td>Totals</td>
+            </tr>
+          </tfoot>
+
+        </table>
+          </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

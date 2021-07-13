@@ -1,0 +1,394 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "Below are common steps for every scenario",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 7662767900,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User is on \"Kế hoạch bảo trì\" page with account \"hungnq\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Kế hoạch bảo trì\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"hungnq\"",
+                  "offset": 48
+                }
+              ],
+              "location": "StepDefinitions.MaintenancePlanningSystem.SearchMPStepDefs.user_is_on_page_with_account(java.lang.String,java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 507047200,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1219591600,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User has maintenance planning as \"KHBT_TEST_DATA\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"KHBT_TEST_DATA\"",
+                  "offset": 33
+                }
+              ],
+              "location": "StepDefinitions.MaintenancePlanningSystem.ReadMPStepDefs.user_has_maintenance_planning_as(java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 515551200,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-07-13T09:16:08.659Z",
+        "before": [
+          {
+            "result": {
+              "duration": 3139659700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitions.Hooks.BeforeTest()"
+            }
+          }
+        ],
+        "line": 8,
+        "name": "Read maintenance planning",
+        "description": "",
+        "id": "read-maintenance-planning;read-maintenance-planning",
+        "after": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitions.Hooks.AfterTest(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 938860000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "User choose maintenance planning and click on feature button and choose view",
+            "match": {
+              "location": "StepDefinitions.MaintenancePlanningSystem.ReadMPStepDefs.user_choose_maintenance_planning_and_click_on_feature_button_and_choose_view()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 502100900,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 86428200,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Open maintenance planning form",
+            "match": {
+              "location": "StepDefinitions.MaintenancePlanningSystem.ReadMPStepDefs.open_maintenance_planning_form()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 507069400,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 121358600,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "Maintenance planning form fields are read-only",
+            "match": {
+              "location": "StepDefinitions.MaintenancePlanningSystem.ReadMPStepDefs.maintenance_planning_form_fields_are_read_only()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 508551200,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 342314300,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "Maintenance planning form fields are loaded by default",
+            "match": {
+              "location": "StepDefinitions.MaintenancePlanningSystem.ReadMPStepDefs.maintenance_planning_form_fields_are_loaded_by_default(io.cucumber.datatable.DataTable)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 515805100,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "KHBT_TEST_DATA",
+                  "13.07.2021",
+                  "Sản xuất",
+                  "Cắt phôi",
+                  "add new"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 179727900,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "User click on detail button",
+            "match": {
+              "location": "StepDefinitions.MaintenancePlanningSystem.ReadMPStepDefs.user_click_on_detail_button()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 503959500,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 75527300,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "Open detail calendar form and form fields are loaded by default",
+            "match": {
+              "location": "StepDefinitions.MaintenancePlanningSystem.ReadMPStepDefs.open_detail_calendar_form_and_form_fields_are_loaded_by_default()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 508032800,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 247643200,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "User click on close button in detail calendar form",
+            "match": {
+              "location": "StepDefinitions.MaintenancePlanningSystem.ReadMPStepDefs.user_click_on_close_button_in_detail_calendar_form()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 501930200,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 7130726700,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "Close detail calendar form",
+            "match": {
+              "location": "StepDefinitions.MaintenancePlanningSystem.ReadMPStepDefs.close_detail_calendar_form()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 504086900,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 250028100,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "User click on close button in maintenance planning form",
+            "match": {
+              "location": "StepDefinitions.MaintenancePlanningSystem.ReadMPStepDefs.user_click_on_close_button_in_maintenance_planning_form()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 509591400,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 88292000,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "Close maintenance planning form",
+            "match": {
+              "location": "StepDefinitions.MaintenancePlanningSystem.ReadMPStepDefs.close_maintenance_planning_form()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 512522900,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 861567900,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "close browser",
+            "match": {
+              "location": "StepDefinitions.Auth.LoginStepDefs.close_browser()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 515489500,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@UnitTest"
+          }
+        ]
+      }
+    ],
+    "name": "Read Maintenance Planning",
+    "description": "",
+    "id": "read-maintenance-planning",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/MaintenancePlanning/ReadMaintenancePlanning.feature",
+    "tags": [
+      {
+        "name": "@UnitTest",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

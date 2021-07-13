@@ -1,0 +1,9 @@
+I. Types of Automation Tests:
+    1. Unit Testing
+    2. Functional Testing
+        2.1 User interface
+        2.2 APIs
+        2.3 Database
+        2.4 Security
+    4. Integration Testing
+    5. Regression Testing
