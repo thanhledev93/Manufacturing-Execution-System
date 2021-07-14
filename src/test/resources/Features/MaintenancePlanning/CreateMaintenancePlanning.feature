@@ -1,8 +1,9 @@
-
+@UnitTest
 Feature: Create Maintenance Planning System
 
   Background: Below are common steps for every scenario
     Given User is on "Kế hoạch bảo trì" page with account "hungnq"
+
 
   Scenario: Create maintenance planning with valid Value.
     When User click on create maintenance planning button
