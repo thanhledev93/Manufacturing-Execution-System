@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 public class Hooks extends BaseClass {
     @Before
     public void BeforeTest() {
-        setupDriver("firefox");
+        setupDriver("chrome");
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
         driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
