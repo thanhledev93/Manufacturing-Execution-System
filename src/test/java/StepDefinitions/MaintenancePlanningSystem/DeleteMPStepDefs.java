@@ -9,6 +9,10 @@ import pageObjects.BaseObjectPage;
 import pageObjects.MaintenancePlanningSystem.MP_MainTablePage;
 import pageObjects.MaintenancePlanningSystem.MP_SearchFormPage;
 
+import java.util.concurrent.TimeUnit;
+
+import static org.awaitility.Awaitility.await;
+
 
 public class DeleteMPStepDefs extends BaseClass {
     public DeleteMPStepDefs() {
@@ -18,22 +22,19 @@ public class DeleteMPStepDefs extends BaseClass {
     }
     @Given("There is a maintenance plan with status as {string}")
     public void there_is_a_maintenance_plan_with_status_as(String status) throws InterruptedException {
-
         mpSearch.chooseFact("Sản xuất");
-        Thread.sleep(1000);
-
         mpSearch.chooseFactLine("Cắt phôi");
-        Thread.sleep(1000);
 
         mpSearch.chooseStatus(status);
-        Thread.sleep(1000);
 
         Assert.assertTrue("Not found maintenance planning", mpMainTable.getNoOfRows() > 0);
 
     }
 
     @When("User choose maintenance planning and click on feature button and choose delete")
-    public void user_choose_maintenance_planning_and_click_on_feature_button_and_choose_delete() {
+    public void user_choose_maintenance_planning_and_click_on_feature_button_and_choose_delete() throws InterruptedException {
+//        Thread.sleep(1000);
+        await().atMost(5000, TimeUnit.SECONDS);
         mpMainTable.clickOnFeatureButtonInFirstRow();
         mpMainTable.clickOnDeleteButton();
     }

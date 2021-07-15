@@ -4,6 +4,7 @@ import StepDefinitions.BaseClass;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.awaitility.Durations;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -11,6 +12,11 @@ import org.openqa.selenium.WebElement;
 import pageObjects.Auth.LoginPage;
 import pageObjects.MaintenancePlanningSystem.MP_MainTablePage;
 import pageObjects.MaintenancePlanningSystem.MP_SearchFormPage;
+
+import java.util.concurrent.TimeUnit;
+
+import static org.awaitility.Awaitility.*;
+import static org.awaitility.Durations.*;
 
 
 public class SearchMPStepDefs extends BaseClass {
@@ -61,7 +67,9 @@ public class SearchMPStepDefs extends BaseClass {
     }
     @Then("User should found maintenance planning in the table when searching")
     public void user_should_found_maintenance_planning_in_the_table_when_searching() {
-        Assert.assertTrue("Not found maintenance planning", mpMainTable.getNoOfRows() > 0);
+        await().atMost(5000, TimeUnit.SECONDS).untilAsserted(()
+                -> Assert.assertEquals("Not found maintenance planning",mpMainTable.getNoOfRows() > 0, true));
+//        Assert.assertTrue(, true);
     }
 
 //    Scenario: User not found MP in the table when enter planning number inValid.
@@ -77,8 +85,10 @@ public class SearchMPStepDefs extends BaseClass {
 
     @Then("User should not found maintenance planning in the table when searching")
     public void user_should_not_found_maintenance_planning_in_the_table_when_searching() {
+        await().atMost(5000, TimeUnit.SECONDS).untilAsserted(()
+                -> Assert.assertEquals("Found maintenance planning", 0, mpMainTable.getNoOfRows()));
         System.out.println(mpMainTable.getNoOfRows());
-        Assert.assertTrue("Found maintenance planning", mpMainTable.getNoOfRows() == 0);
+//        Assert.assertTrue("Found maintenance planning", mpMainTable.getNoOfRows() == 0);
     }
 
 }

@@ -1,6 +1,7 @@
 package pageObjects.MaintenancePlanningSystem;
 
 import StepDefinitions.BaseClass;
+import io.cucumber.java.an.E;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -50,10 +51,10 @@ public class MP_MainTablePage extends BaseClass {
     }
 
     public void clickOnFeatureButtonInFirstRow() {
-        verifyContentValue = tblMainTable.findElement(By.xpath("//maintenance_planning_index//table//tbody//tr[1]//td[3]")).getText();
-        System.out.println(verifyContentValue);
-        WebElement btnFeature = tblMainTable.findElement(By.xpath("//maintenance_planning_index//button[@transloco='maintenance.feature']"));
-        clickOn(driver, btnFeature);
+            verifyContentValue = tblMainTable.findElement(By.xpath("//maintenance_planning_index//table//tbody//tr[1]//td[3]")).getText();
+            System.out.println(verifyContentValue);
+            WebElement btnFeature = tblMainTable.findElement(By.xpath("//maintenance_planning_index//button[@transloco='maintenance.feature']"));
+            clickOn(driver, btnFeature);
     }
 
     public void clickOnViewButton() {

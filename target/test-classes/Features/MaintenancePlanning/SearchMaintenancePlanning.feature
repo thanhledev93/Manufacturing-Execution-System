@@ -1,4 +1,4 @@
-
+@UnitTest
 Feature: Search Maintenance Planning
 
   Background: Below are common steps for every scenario
@@ -11,6 +11,7 @@ Feature: Search Maintenance Planning
     And User click on approval status field and choose status as "Đã duyệt"
     Then User should found maintenance planning in the table when searching
     And close browser
+
 
   Scenario: User not found MP in the table when enter planning number inValid
     When User click on factory field and choose factory as "Sản xuất"

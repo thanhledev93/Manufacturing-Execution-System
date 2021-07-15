@@ -40,7 +40,6 @@ Feature: Create Maintenance Planning System
     Then Display alert message as "Bắt buộc" for required values in maintenance planning form
     And close browser
 
-
   Scenario: Create maintenance planning with plan number already exist.
     Given There is a maintenance plan with plan number as "KHBT_TEST_DATA"
     When User click on create maintenance planning button

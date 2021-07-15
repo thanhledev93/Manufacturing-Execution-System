@@ -12,6 +12,7 @@ Feature: Search Maintenance Planning
     Then User should found maintenance planning in the table when searching
     And close browser
 
+
   Scenario: User not found MP in the table when enter planning number inValid
     When User click on factory field and choose factory as "Sản xuất"
     And User click on factory line field and choose factory line as "Cắt phôi"

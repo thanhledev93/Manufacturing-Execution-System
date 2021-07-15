@@ -4,6 +4,7 @@ Feature: Create Maintenance Planning System
   Background: Below are common steps for every scenario
     Given User is on "Kế hoạch bảo trì" page with account "hungnq"
 
+
   Scenario: Create maintenance planning with valid Value.
     When User click on create maintenance planning button
     Then Open maintenance planning form
@@ -38,7 +39,6 @@ Feature: Create Maintenance Planning System
     And User click on save button in maintenance planning form
     Then Display alert message as "Bắt buộc" for required values in maintenance planning form
     And close browser
-
 
   Scenario: Create maintenance planning with plan number already exist.
     Given There is a maintenance plan with plan number as "KHBT_TEST_DATA"

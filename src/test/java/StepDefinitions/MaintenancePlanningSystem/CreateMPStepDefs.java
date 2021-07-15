@@ -5,11 +5,16 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.support.ui.FluentWait;
 import pageObjects.BaseObjectPage;
 import pageObjects.MaintenancePlanningSystem.MP_DetailCalendarFormPage;
 import pageObjects.MaintenancePlanningSystem.MP_MainTablePage;
 import pageObjects.MaintenancePlanningSystem.MP_MaintenancePlanningFormPage;
 import pageObjects.MaintenancePlanningSystem.MP_SearchFormPage;
+
+import java.util.concurrent.TimeUnit;
+
+import static org.awaitility.Awaitility.await;
 
 
 public class CreateMPStepDefs extends BaseClass {
@@ -55,6 +60,26 @@ public class CreateMPStepDefs extends BaseClass {
     public void user_click_on_create_calendar_button() {
         mpMaintenancePlanning.clickOnCreateCalendarButton();
     }
+
+    @Then("Display alert message as {string}")
+    public void display_alert_message_as(String mes) {
+        boolean isDisplay = baseObjectPage.verifyAlertMes(mes);
+        Assert.assertTrue("The message is not displayed", isDisplay);
+    }
+    @When("User click on yes button")
+    public void user_click_on_yes_button() {
+        baseObjectPage.clickOnConfirmAlertMes();
+    }
+    @When("User click on confirm button")
+    public void user_click_on_confirm_button() {
+        baseObjectPage.clickOnCloseAlertMes();
+    }
+    @Then("Close alert message")
+    public void close_alert_message() {
+        await().atMost(5000, TimeUnit.SECONDS).untilAsserted(()
+                -> Assert.assertFalse("Can't closed popup", baseObjectPage.verifyCloseAlertMes()));
+    }
+
     @When("User click on save button in maintenance planning form")
     public void user_click_on_save_button_in_maintenance_planning_form() {
         mpMaintenancePlanning.clickOnSaveButton();
@@ -78,11 +103,11 @@ public class CreateMPStepDefs extends BaseClass {
 
     // Scenario: Create maintenance planning with plan number already exist ***********************************
     @Given("There is a maintenance plan with plan number as {string}")
-    public void there_is_a_maintenance_plan_with_plan_number_as(String planNum) throws InterruptedException {
+    public void there_is_a_maintenance_plan_with_plan_number_as(String planNum) {
         mpSearch.enterPlanNumber(planNum);
         mpSearch.clickOnSearchButton();
-        Thread.sleep(1000);
-        Assert.assertTrue("Not found maintenance planning", mpMainTable.getNoOfRows() > 0);
+        await().atMost(5000, TimeUnit.SECONDS).untilAsserted(()
+                -> Assert.assertTrue("Not found maintenance planning", mpMainTable.getNoOfRows() > 0));
     }
     @When("User enter maintenance planning number with plan number as {string}")
     public void user_enter_maintenance_planning_number_with_plan_number_as(String planNum) {

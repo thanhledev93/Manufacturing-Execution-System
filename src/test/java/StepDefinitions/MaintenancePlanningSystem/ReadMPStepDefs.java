@@ -68,7 +68,9 @@ public class ReadMPStepDefs extends BaseClass {
     }
 
     @Then("Close detail calendar form")
-    public void close_detail_calendar_form() {
+    public void close_detail_calendar_form() throws InterruptedException {
+        Thread.sleep(1000);
+
         boolean isCloseDCForm = mpDetailCalendar.verifyOpenMPForm();
         Assert.assertTrue("Detail calendar form is not closed", isCloseDCForm);
     }
