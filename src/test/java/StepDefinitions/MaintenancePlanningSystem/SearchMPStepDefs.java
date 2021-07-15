@@ -76,7 +76,7 @@ public class SearchMPStepDefs extends BaseClass {
     @When("User click on Search field and enter planning number as {string}")
     public void user_click_on_search_field_and_enter_planning_number_as(String planNumber) {
         mpSearch.enterPlanNumber(planNumber);
-    }
+    }Ư
 
     @When("User click on search button")
     public void user_click_on_search_button() {
