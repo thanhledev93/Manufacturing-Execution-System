@@ -53,9 +53,11 @@ public class BaseClass {
         if (browserName.equalsIgnoreCase("chrome")) {
             cap.setPlatform(Platform.ANY);
             cap.setBrowserName(BrowserType.CHROME);
+            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + File.separator + "drivers" + File.separator + "chromedriver.exe");
         } else if (browserName.equalsIgnoreCase("firefox")) {
             cap.setPlatform(Platform.ANY);
             cap.setBrowserName(BrowserType.FIREFOX);
+            System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + File.separator + "drivers" + File.separator + "geckodriver.exe");
         }
         driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), cap);
     }
