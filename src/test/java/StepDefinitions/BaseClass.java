@@ -1,13 +1,12 @@
 package StepDefinitions;
 
 import org.apache.commons.lang3.RandomStringUtils;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.BrowserType;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -50,18 +49,15 @@ public class BaseClass {
     }
 
     public void setupDriver(String browserName) throws MalformedURLException {
-
+        DesiredCapabilities cap = new DesiredCapabilities();
         if (browserName.equalsIgnoreCase("chrome")) {
-            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + File.separator + "drivers" + File.separator + "chromedriver.exe");
-            driver = new RemoteWebDriver(new URL("http://localhost:4444/"), new ChromeOptions());
-//            driver = new ChromeDriver();
+            cap.setPlatform(Platform.ANY);
+            cap.setBrowserName(BrowserType.CHROME);
         } else if (browserName.equalsIgnoreCase("firefox")) {
-            System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + File.separator + "drivers" + File.separator + "geckodriver.exe");
-            driver = new FirefoxDriver();
-        } else {
-            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + File.separator + "drivers" + File.separator + "chromedriver.exe");
-            driver = new ChromeDriver();
+            cap.setPlatform(Platform.ANY);
+            cap.setBrowserName(BrowserType.FIREFOX);
         }
+        driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), cap);
     }
 
     public void sendKeys(WebDriver driver1, WebElement element, String value) {

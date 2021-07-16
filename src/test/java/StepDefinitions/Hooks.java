@@ -9,19 +9,18 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
 
-
-
+import java.net.MalformedURLException;
 import java.util.concurrent.TimeUnit;
 
 import static org.awaitility.Awaitility.await;
 
 public class Hooks extends BaseClass {
     @Before
-    public void BeforeTest() {
+    public void BeforeTest() throws MalformedURLException {
         setupDriver("chrome");
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
-        driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(200, TimeUnit.SECONDS);
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
     @AfterStep
