@@ -6,7 +6,9 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -18,6 +20,8 @@ import pageObjects.MaintenancePlanningSystem.MP_MaintenancePlanningFormPage;
 import pageObjects.MaintenancePlanningSystem.MP_SearchFormPage;
 
 import java.io.File;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.List;
 
 public class BaseClass {
@@ -45,10 +49,11 @@ public class BaseClass {
         webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(by)));
     }
 
-    public void setupDriver(String browserName) {
+    public void setupDriver(String browserName) throws MalformedURLException {
 
         if (browserName.equalsIgnoreCase("chrome")) {
             System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + File.separator + "drivers" + File.separator + "chromedriver.exe");
+            var chromeDriver = new RemoteWebDriver(new URL("http://localhost:4444/"), new ChromeOptions());
             driver = new ChromeDriver();
         } else if (browserName.equalsIgnoreCase("firefox")) {
             System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + File.separator + "drivers" + File.separator + "geckodriver.exe");
