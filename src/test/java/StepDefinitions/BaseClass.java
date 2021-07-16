@@ -53,8 +53,8 @@ public class BaseClass {
 
         if (browserName.equalsIgnoreCase("chrome")) {
             System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + File.separator + "drivers" + File.separator + "chromedriver.exe");
-            var chromeDriver = new RemoteWebDriver(new URL("http://localhost:4444/"), new ChromeOptions());
-            driver = new ChromeDriver();
+            driver = new RemoteWebDriver(new URL("http://localhost:4444/"), new ChromeOptions());
+//            driver = new ChromeDriver();
         } else if (browserName.equalsIgnoreCase("firefox")) {
             System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + File.separator + "drivers" + File.separator + "geckodriver.exe");
             driver = new FirefoxDriver();
