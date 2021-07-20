@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/reporting.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber-JVM Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber-JVM Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="feature-overview.html">Features</a></li>
+        <li role="presentation" ><a href="tag-overview.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="step-overview.html">Steps</a></li>
+        <li role="presentation" ><a href="failures-overview.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid" id="build-info">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-1">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Project</th>
+                          <th>Number</th>
+                        <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="info">
+            <td>Manufacturing-Execution-System</td>
+                          <td>1</td>
+                        <td>19 Jul 2021, 18:11</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div id="report-lead" class="container-fluid>
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h2>Steps Statistics</h2>
+              <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+          </div>
+  </div>
+</div>
+
+<div class="container-fluid" id="summary">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+              <table id="tablesorter" class="stats-table table-hover">
+
+          <thead>
+            <tr class="header">
+              <th>Implementation</th>
+              <th>Occurrences</th>
+              <th>Duration</th>
+              <th>Average</th>
+              <th>Ratio</th>
+            </tr>
+          </thead>
+
+          <tbody>
+                          <tr>
+                <td class="location">StepDefinitions.Auth.LoginStepDefs.close_browser()</td>
+                <td>4</td>
+                <td class="duration" data-value="4688407900">4s 688ms</td>
+                <td class="duration" data-value="1172101975">1s 172ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.Hooks.AfterTest(io.cucumber.java.Scenario)</td>
+                <td>4</td>
+                <td class="duration" data-value="4090700">004ms</td>
+                <td class="duration" data-value="1022675">001ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.Hooks.BeforeTest()</td>
+                <td>4</td>
+                <td class="duration" data-value="19278567300">19s 278ms</td>
+                <td class="duration" data-value="4819641825">4s 819ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.MaintenancePlanningSystem.ReadMPStepDefs.close_detail_calendar_form()</td>
+                <td>1</td>
+                <td class="duration" data-value="6038449400">6s 038ms</td>
+                <td class="duration" data-value="6038449400">6s 038ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.MaintenancePlanningSystem.ReadMPStepDefs.close_maintenance_planning_form()</td>
+                <td>1</td>
+                <td class="duration" data-value="76519700">076ms</td>
+                <td class="duration" data-value="76519700">076ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.MaintenancePlanningSystem.ReadMPStepDefs.maintenance_planning_form_fields_are_loaded_by_default(io.cucumber.datatable.DataTable)</td>
+                <td>1</td>
+                <td class="duration" data-value="307428300">307ms</td>
+                <td class="duration" data-value="307428300">307ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.MaintenancePlanningSystem.ReadMPStepDefs.maintenance_planning_form_fields_are_read_only()</td>
+                <td>1</td>
+                <td class="duration" data-value="99814200">099ms</td>
+                <td class="duration" data-value="99814200">099ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.MaintenancePlanningSystem.ReadMPStepDefs.open_detail_calendar_form_and_form_fields_are_loaded_by_default()</td>
+                <td>1</td>
+                <td class="duration" data-value="15627600">015ms</td>
+                <td class="duration" data-value="15627600">015ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.MaintenancePlanningSystem.ReadMPStepDefs.open_maintenance_planning_form()</td>
+                <td>1</td>
+                <td class="duration" data-value="62510900">062ms</td>
+                <td class="duration" data-value="62510900">062ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.MaintenancePlanningSystem.ReadMPStepDefs.user_choose_maintenance_planning_and_click_on_feature_button_and_choose_view()</td>
+                <td>1</td>
+                <td class="duration" data-value="269545800">269ms</td>
+                <td class="duration" data-value="269545800">269ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.MaintenancePlanningSystem.ReadMPStepDefs.user_click_on_close_button_in_detail_calendar_form()</td>
+                <td>1</td>
+                <td class="duration" data-value="128565900">128ms</td>
+                <td class="duration" data-value="128565900">128ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.MaintenancePlanningSystem.ReadMPStepDefs.user_click_on_close_button_in_maintenance_planning_form()</td>
+                <td>1</td>
+                <td class="duration" data-value="117044100">117ms</td>
+                <td class="duration" data-value="117044100">117ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.MaintenancePlanningSystem.ReadMPStepDefs.user_click_on_detail_button()</td>
+                <td>1</td>
+                <td class="duration" data-value="185239800">185ms</td>
+                <td class="duration" data-value="185239800">185ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.MaintenancePlanningSystem.ReadMPStepDefs.user_has_maintenance_planning_as(java.lang.String)</td>
+                <td>1</td>
+                <td class="duration" data-value="786034300">786ms</td>
+                <td class="duration" data-value="786034300">786ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.MaintenancePlanningSystem.SearchMPStepDefs.user_click_on_approval_status_field_and_choose_status_as(java.lang.String)</td>
+                <td>3</td>
+                <td class="duration" data-value="1581699000">1s 581ms</td>
+                <td class="duration" data-value="527233000">527ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.MaintenancePlanningSystem.SearchMPStepDefs.user_click_on_factory_field_and_choose_factory_as(java.lang.String)</td>
+                <td>3</td>
+                <td class="duration" data-value="3021719000">3s 021ms</td>
+                <td class="duration" data-value="1007239666">1s 007ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.MaintenancePlanningSystem.SearchMPStepDefs.user_click_on_factory_line_field_and_choose_factory_line_as(java.lang.String)</td>
+                <td>3</td>
+                <td class="duration" data-value="2033102900">2s 033ms</td>
+                <td class="duration" data-value="677700966">677ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.MaintenancePlanningSystem.SearchMPStepDefs.user_click_on_search_button()</td>
+                <td>2</td>
+                <td class="duration" data-value="183873800">183ms</td>
+                <td class="duration" data-value="91936900">091ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.MaintenancePlanningSystem.SearchMPStepDefs.user_click_on_search_field_and_enter_planning_number_as(java.lang.String)</td>
+                <td>2</td>
+                <td class="duration" data-value="469810300">469ms</td>
+                <td class="duration" data-value="234905150">234ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.MaintenancePlanningSystem.SearchMPStepDefs.user_is_on_page_with_account(java.lang.String,java.lang.String)</td>
+                <td>4</td>
+                <td class="duration" data-value="13833749000">13s 833ms</td>
+                <td class="duration" data-value="3458437250">3s 458ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.MaintenancePlanningSystem.SearchMPStepDefs.user_should_found_maintenance_planning_in_the_table_when_searching()</td>
+                <td>2</td>
+                <td class="duration" data-value="280151800">280ms</td>
+                <td class="duration" data-value="140075900">140ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.MaintenancePlanningSystem.SearchMPStepDefs.user_should_not_found_maintenance_planning_in_the_table_when_searching()</td>
+                <td>1</td>
+                <td class="duration" data-value="10160477000">10s 160ms</td>
+                <td class="duration" data-value="10160477000">10s 160ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                      </tbody>
+
+          <tfoot class="total">
+            <tr>
+              <td>22</td>
+              <td>43</td>
+              <td class="duration">1m 3s 622ms</td>
+              <td class="duration">1s 479ms</td>
+              <td>Totals</td>
+            </tr>
+          </tfoot>
+
+        </table>
+          </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

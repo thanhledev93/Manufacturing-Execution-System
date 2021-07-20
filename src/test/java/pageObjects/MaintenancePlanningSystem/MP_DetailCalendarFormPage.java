@@ -11,7 +11,7 @@ public class MP_DetailCalendarFormPage extends BaseClass {
     public static String verifyQualityCPSaveSuccess;
     public MP_DetailCalendarFormPage() {
 
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(getDriver(), this);
     }
 
     // Begin Find Elements
@@ -39,7 +39,7 @@ public class MP_DetailCalendarFormPage extends BaseClass {
     }
 
     public void clickOnCloseButton() {
-        clickOn(driver, btnClose);
+        clickOn(getDriver(), btnClose);
     }
 
     public boolean verifyOpenMPForm() {

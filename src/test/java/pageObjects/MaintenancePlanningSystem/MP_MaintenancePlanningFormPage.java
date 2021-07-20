@@ -13,7 +13,7 @@ public class MP_MaintenancePlanningFormPage extends BaseClass {
     public static String verifyMPSaveSuccess;
     public MP_MaintenancePlanningFormPage() {
 
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(getDriver(), this);
     }
 
     // Begin Find Elements
@@ -145,11 +145,11 @@ public class MP_MaintenancePlanningFormPage extends BaseClass {
     }
 
     public void clickOnCloseButton() {
-        clickOn(driver, btnClose);
+        clickOn(getDriver(), btnClose);
     }
 
     public void clickOnDetailButton() {
-        clickOn(driver, btnDetail);
+        clickOn(getDriver(), btnDetail);
     }
 
     public void enterPlanNum() {
@@ -158,39 +158,39 @@ public class MP_MaintenancePlanningFormPage extends BaseClass {
         String content = "KHBT - " + randomString();
 
         txtPlanNum.clear();
-        sendKeys(driver, txtPlanNum, content);
+        sendKeys(getDriver(), txtPlanNum, content);
 
         verifyMPSaveSuccess = content;
     }
     public void enterPlanNum(String planNum ) {
         txtPlanNum.clear();
-        sendKeys(driver, txtPlanNum, planNum);
+        sendKeys(getDriver(), txtPlanNum, planNum);
     }
     public void enterNote() {
         String note = "Note - " + randomString();
         txtNote.clear();
-        sendKeys(driver, txtNote, note);
+        sendKeys(getDriver(), txtNote, note);
     }
     public void clearPlanNum() {
-        clickOn(driver,txtPlanNum);
+        clickOn(getDriver(),txtPlanNum);
         txtPlanNum.sendKeys(Keys.chord(Keys.CONTROL, "a"));
         txtPlanNum.sendKeys(Keys.chord(Keys.DELETE));
     }
 
     public void chooseFact(String fact) throws InterruptedException {
-        clickOn(driver, cboFactory);
-        sendKeys(driver, slOptionInput, fact);
+        clickOn(getDriver(), cboFactory);
+        sendKeys(getDriver(), slOptionInput, fact);
 
         Thread.sleep(1000);
-        clickOn(driver, slOptionValue);
+        clickOn(getDriver(), slOptionValue);
     }
 
     public void chooseFactLine(String factLine) throws InterruptedException {
-        clickOn(driver, cboFactoryLine);
-        sendKeys(driver, slOptionInput, factLine);
+        clickOn(getDriver(), cboFactoryLine);
+        sendKeys(getDriver(), slOptionInput, factLine);
 
         Thread.sleep(1000);
-        clickOn(driver, slOptionValue);
+        clickOn(getDriver(), slOptionValue);
     }
     public void chooseCreatedDate() {
         String month = "JUL";
@@ -204,11 +204,11 @@ public class MP_MaintenancePlanningFormPage extends BaseClass {
         }
     }
     public void clickOnCreateCalendarButton() {
-        clickOn(driver, btnCreateCalendar);
+        clickOn(getDriver(), btnCreateCalendar);
     }
 
     public void clickOnSaveButton() {
-        clickOn(driver, btnSave);
+        clickOn(getDriver(), btnSave);
     }
     public boolean verifyAlertMesForPlanNum(String mes) {
         try {
@@ -219,21 +219,21 @@ public class MP_MaintenancePlanningFormPage extends BaseClass {
     }
 
     public void clickOnSubAprButton() {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
+        JavascriptExecutor js = (JavascriptExecutor) getDriver();
         js.executeScript("arguments[0].scrollIntoView();", btnSubmitApproval);
-        clickOn(driver, btnSubmitApproval);
+        clickOn(getDriver(), btnSubmitApproval);
     }
 
     public void clickOnAprButton() {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
+        JavascriptExecutor js = (JavascriptExecutor) getDriver();
         js.executeScript("arguments[0].scrollIntoView();", btnApproval);
-        clickOn(driver, btnApproval);
+        clickOn(getDriver(), btnApproval);
     }
 
     public void clickOnReturnButton() {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
+        JavascriptExecutor js = (JavascriptExecutor) getDriver();
         js.executeScript("arguments[0].scrollIntoView();", btnReturn);
-        clickOn(driver, btnReturn);
+        clickOn(getDriver(), btnReturn);
     }
 
 }

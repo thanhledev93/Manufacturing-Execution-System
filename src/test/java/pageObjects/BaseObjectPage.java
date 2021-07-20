@@ -9,7 +9,7 @@ import java.util.List;
 
 public class BaseObjectPage extends BaseClass {
     public BaseObjectPage() {
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(getDriver(), this);
     }
 
     // Begin Find Elements
@@ -67,10 +67,10 @@ public class BaseObjectPage extends BaseClass {
         }
     }
     public void clickOnCloseAlertMes() {
-        clickOn(driver, btnAlertBoxClose);
+        clickOn(getDriver(), btnAlertBoxClose);
     }
     public void clickOnConfirmAlertMes() {
-        clickOn(driver, btnAlertBoxConfirm);
+        clickOn(getDriver(), btnAlertBoxConfirm);
     }
 
     public boolean verifyCloseAlertMes() {
@@ -82,16 +82,16 @@ public class BaseObjectPage extends BaseClass {
     }
 
     public void clickAndChooseAprProcess(String apvProcess)  {
-        clickOn(driver, cboApproval);
-        sendKeys(driver, slOptionInput, apvProcess);
-        clickOn(driver, slOptionValue);
+        clickOn(getDriver(), cboApproval);
+        sendKeys(getDriver(), slOptionInput, apvProcess);
+        clickOn(getDriver(), slOptionValue);
     }
 
     public boolean verifyDisplayArpProcessInfo() {
         return tblApprovalProcessRows.size() > 0;
     }
     public void clickOnSubmitApprovalButton() {
-        clickOn(driver, btnSubmitApproval);
+        clickOn(getDriver(), btnSubmitApproval);
     }
 
     public boolean verifyDisplayApprovalForm() {
@@ -103,11 +103,11 @@ public class BaseObjectPage extends BaseClass {
     }
 
     public void enterReason(String reason) {
-        sendKeys(driver,txtReason,reason);
+        sendKeys(getDriver(),txtReason,reason);
     }
 
     public void clickOnReturnButton() {
-        clickOn(driver, btnReturn);
+        clickOn(getDriver(), btnReturn);
     }
 
 

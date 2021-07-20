@@ -13,7 +13,7 @@ public class MP_MainTablePage extends BaseClass {
     public static String verifyContentValue = "";
     public static int index = -1;
     public MP_MainTablePage() {
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(getDriver(), this);
     }
 
     // Begin Find Elements
@@ -47,24 +47,24 @@ public class MP_MainTablePage extends BaseClass {
         verifyContentValue = tblMainTable.findElement(By.xpath("//maintenance_planning_index//table//tbody//tr[" + index + "]//td[3]")).getText();
         System.out.println(verifyContentValue);
         WebElement btnFeature = tblMainTable.findElement(By.xpath("//maintenance_planning_index//table//tbody//tr[" + index + "]//td//button[@transloco='system.feature']"));
-        clickOn(driver, btnFeature);
+        clickOn(getDriver(), btnFeature);
     }
 
     public void clickOnFeatureButtonInFirstRow() {
             verifyContentValue = tblMainTable.findElement(By.xpath("//maintenance_planning_index//table//tbody//tr[1]//td[3]")).getText();
             System.out.println(verifyContentValue);
             WebElement btnFeature = tblMainTable.findElement(By.xpath("//maintenance_planning_index//button[@transloco='maintenance.feature']"));
-            clickOn(driver, btnFeature);
+            clickOn(getDriver(), btnFeature);
     }
 
     public void clickOnViewButton() {
-        clickOn(driver, btnView);
+        clickOn(getDriver(), btnView);
     }
     public void clickOnEditButton() {
-        clickOn(driver, btnEdit);
+        clickOn(getDriver(), btnEdit);
     }
     public void clickOnDeleteButton() {
-        clickOn(driver, btnDelete);
+        clickOn(getDriver(), btnDelete);
     }
 
     public List<WebElement> getTblRows() {
@@ -75,7 +75,7 @@ public class MP_MainTablePage extends BaseClass {
     public int getRowIndex() {
         selectValueFromDropDown(slViewNumber, "100");
         for (int i=1; i<=tblRows.size(); i++) {
-            String ctn = driver.findElement(By.xpath("//table//tbody//tr[contains(@class, 'ng-star-inserted')][" + i + "]//td[3]")).getText();
+            String ctn = getDriver().findElement(By.xpath("//table//tbody//tr[contains(@class, 'ng-star-inserted')][" + i + "]//td[3]")).getText();
             if (verifyContentValue.equalsIgnoreCase(ctn)) {
                 System.out.println("Test - " + verifyContentValue);
                 return i;
@@ -88,7 +88,7 @@ public class MP_MainTablePage extends BaseClass {
         selectValueFromDropDown(slViewNumber, "100");
         Thread.sleep(1000);
         for (int i=1; i<=tblRows.size(); i++) {
-            String ctn = driver.findElement(By.xpath("//table//tbody//tr[contains(@class, 'ng-star-inserted')][" + i + "]//td[3]")).getText();
+            String ctn = getDriver().findElement(By.xpath("//table//tbody//tr[contains(@class, 'ng-star-inserted')][" + i + "]//td[3]")).getText();
             if (content.equalsIgnoreCase(ctn)) {
                 return index = i;
             }
@@ -99,7 +99,7 @@ public class MP_MainTablePage extends BaseClass {
     public boolean verifyApprovalStatus(String ts) {
         System.out.println(getRowIndex());
         try {
-            WebElement element = driver.findElement(By.xpath("//maintenance_planning_index[1]/div[1]/div[1]/div[1]/mat-card[2]/div[1]/div[1]/div[3]/div[2]/table[1]/tbody[1]/tr[" + getRowIndex() + "]/td[7]//span[contains(text(),'"+ ts +"')]"));
+            WebElement element = getDriver().findElement(By.xpath("//maintenance_planning_index[1]/div[1]/div[1]/div[1]/mat-card[2]/div[1]/div[1]/div[3]/div[2]/table[1]/tbody[1]/tr[" + getRowIndex() + "]/td[7]//span[contains(text(),'"+ ts +"')]"));
             return element.isDisplayed();
         } catch (Exception e) {
             return false;

@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 public class MP_SearchFormPage extends BaseClass {
     public static String verifyCboQualityCPValue;
     public MP_SearchFormPage() {
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(getDriver(), this);
     }
 
     // Begin Find Elements
@@ -41,32 +41,32 @@ public class MP_SearchFormPage extends BaseClass {
 
     // End Find Elements
     public void chooseFact(String factoryName) {
-        clickOn(driver, cboFact);
-        sendKeys(driver, optInput, factoryName);
-        clickOn(driver, optValue);
+        clickOn(getDriver(), cboFact);
+        sendKeys(getDriver(), optInput, factoryName);
+        clickOn(getDriver(), optValue);
     }
 
     public void chooseFactLine(String factoryLineName)  {
-        clickOn(driver, cboFactLine);
-        sendKeys(driver, optInput, factoryLineName);
-        clickOn(driver, optValue);
+        clickOn(getDriver(), cboFactLine);
+        sendKeys(getDriver(), optInput, factoryLineName);
+        clickOn(getDriver(), optValue);
     }
 
     public void chooseStatus(String approvalStatus){
-        clickOn(driver, cboStatus);
-        sendKeys(driver, optInput, approvalStatus);
-        clickOn(driver, optValue);
+        clickOn(getDriver(), cboStatus);
+        sendKeys(getDriver(), optInput, approvalStatus);
+        clickOn(getDriver(), optValue);
     }
 
     public void enterPlanNumber(String planNum) {
-        clickOn(driver, txtSearch);
-        sendKeys(driver, txtSearch, planNum);
+        clickOn(getDriver(), txtSearch);
+        sendKeys(getDriver(), txtSearch, planNum);
     }
     public void clickOnSearchButton() {
-        clickOn(driver, btnSearch);
+        clickOn(getDriver(), btnSearch);
     }
     public void clickOnCreateButton() {
-        clickOn(driver, btnAdd);
+        clickOn(getDriver(), btnAdd);
     }
 
 }

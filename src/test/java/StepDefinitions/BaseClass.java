@@ -11,21 +11,24 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Parameters;
 import pageObjects.Auth.LoginPage;
 import pageObjects.BaseObjectPage;
 import pageObjects.MaintenancePlanningSystem.MP_DetailCalendarFormPage;
 import pageObjects.MaintenancePlanningSystem.MP_MainTablePage;
 import pageObjects.MaintenancePlanningSystem.MP_MaintenancePlanningFormPage;
 import pageObjects.MaintenancePlanningSystem.MP_SearchFormPage;
+import runner.WebDriverFactory;
 
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
-public class BaseClass {
+public class BaseClass extends WebDriverFactory {
     public static final String baseUrl = "https://quanlysanxuat.online/sign-in";
-    public static WebDriver driver;
+
     public LoginPage loginPage;
 
     // Maintenance Planning
@@ -34,8 +37,8 @@ public class BaseClass {
     public MP_MaintenancePlanningFormPage mpMaintenancePlanning;
     public MP_SearchFormPage mpSearch;
 
-
     public BaseObjectPage baseObjectPage;
+
 
 
     //Create for generating random string for Unique email
@@ -44,23 +47,11 @@ public class BaseClass {
         return (generatedString1);
     }
     public void waitForElementByXpath(String by) {
-        WebDriverWait webDriverWait = new WebDriverWait(driver, 10);
+        WebDriverWait webDriverWait = new WebDriverWait(getDriver(), 10);
         webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(by)));
     }
 
-    public void setupDriver(String browserName) throws MalformedURLException {
-        DesiredCapabilities cap = new DesiredCapabilities();
-        if (browserName.equalsIgnoreCase("chrome")) {
-            cap.setPlatform(Platform.ANY);
-            cap.setBrowserName(BrowserType.CHROME);
-            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + File.separator + "drivers" + File.separator + "chromedriver.exe");
-        } else if (browserName.equalsIgnoreCase("firefox")) {
-            cap.setPlatform(Platform.ANY);
-            cap.setBrowserName(BrowserType.FIREFOX);
-            System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + File.separator + "drivers" + File.separator + "geckodriver.exe");
-        }
-        driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), cap);
-    }
+
 
     public void sendKeys(WebDriver driver1, WebElement element, String value) {
         new WebDriverWait(driver1, 5).until(ExpectedConditions.visibilityOf(element));
@@ -74,22 +65,22 @@ public class BaseClass {
     }
 
     public void chooseDatePicker(WebElement dpkDate, WebElement chooseDate, WebElement chY, WebElement chM,WebElement lblMonth,WebElement chooseDay, WebElement nextMonth, String compareText){
-        JavascriptExecutor js = (JavascriptExecutor) driver;
+        JavascriptExecutor js = (JavascriptExecutor) getDriver();
         js.executeScript("arguments[0].scrollIntoView();", dpkDate);
 
-        clickOn(driver, dpkDate);
-        clickOn(driver, chooseDate);
-        clickOn(driver, chY);
-        clickOn(driver, chM);
+        clickOn(getDriver(), dpkDate);
+        clickOn(getDriver(), chooseDate);
+        clickOn(getDriver(), chY);
+        clickOn(getDriver(), chM);
 
         while (true) {
             if (lblMonth.getText().equals(compareText)) {
                 break;
             } else {
-                clickOn(driver, nextMonth);
+                clickOn(getDriver(), nextMonth);
             }
         }
-        clickOn(driver, chooseDay);
+        clickOn(getDriver(), chooseDay);
     }
     public void selectValueFromDropDown(WebElement ele, String value) {
         Select select = new Select(ele);
@@ -97,10 +88,12 @@ public class BaseClass {
         List<WebElement> listElements = select.getOptions();
         for (WebElement element : listElements) {
             if (value.equalsIgnoreCase(element.getText())) {
-                clickOn(driver, element);
+                clickOn(getDriver(), element);
                 break;
             }
         }
     }
+
+
 
 }

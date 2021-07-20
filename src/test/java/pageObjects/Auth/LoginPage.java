@@ -1,7 +1,7 @@
 package pageObjects.Auth;
 
 import StepDefinitions.BaseClass;
-import org.junit.Assert;
+import org.testng.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -13,7 +13,7 @@ import java.util.List;
 public class LoginPage extends BaseClass {
 
     public LoginPage() {
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(getDriver(), this);
     }
 
     @FindBy(xpath = "//mat-form-field[1]/div[1]/div[1]/div[1]/input[1]")
@@ -43,36 +43,36 @@ public class LoginPage extends BaseClass {
 
     public void setUsername(String uname) {
         txtUsername.clear();
-        sendKeys(driver, txtUsername, uname);
+        sendKeys(getDriver(), txtUsername, uname);
 
     }
 
 
     public void setPassword(String pwd) {
         txtPassword.clear();
-        sendKeys(driver, txtPassword, pwd);
+        sendKeys(getDriver(), txtPassword, pwd);
     }
 
     public void clickLogin() {
-        clickOn(driver, btnLogin);
+        clickOn(getDriver(), btnLogin);
     }
 
     public void clickLogout() {
-        clickOn(driver, btnUser);
-        clickOn(driver, btnLogout);
+        clickOn(getDriver(), btnUser);
+        clickOn(getDriver(), btnLogout);
     }
 
     public void clickOnUsernameOrPasswordIsBlank()  {
 
-        clickOn(driver, txtUsername);
+        clickOn(getDriver(), txtUsername);
         txtUsername.sendKeys(Keys.CONTROL + "a");
         txtUsername.sendKeys(Keys.DELETE);
 
-        clickOn(driver, txtPassword);
+        clickOn(getDriver(), txtPassword);
         txtPassword.sendKeys(Keys.CONTROL + "a");
         txtPassword.sendKeys(Keys.DELETE);
 
-        clickOn(driver, txtUsername);
+        clickOn(getDriver(), txtUsername);
 
     }
 
