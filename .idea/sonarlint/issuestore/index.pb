@@ -1,8 +1,6 @@
 
 ^
 .src/test/resources/Features/Auth/Login.feature,4\b\4bb68e5de8f8254e704a14920b21bd343faf8046
-W
-'.github/workflows/docker-compose-v3.yml,f\3\f368fa8c0086f41353d8c9dd20ecca2dabe7890b
 }
 Msrc/test/java/StepDefinitions/MaintenancePlanningSystem/CreateMPStepDefs.java,b\f\bfc7b6cbff8ae75bb05277cd666d3a4d5d420e0d
 }

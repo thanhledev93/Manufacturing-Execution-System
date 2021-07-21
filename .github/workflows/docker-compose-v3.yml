@@ -46,3 +46,16 @@ services:
       - "4442:4442"
       - "4443:4443"
       - "4444:4444"
+  sonarqube:
+    image: sonarqube:lts
+    ports:
+      - 9000:9000
+    networks:
+      - mynetwork
+  jenkins:
+      build:
+        context: .
+      ports:
+        - 8080:8080
+      networks:
+        - mynetwork
