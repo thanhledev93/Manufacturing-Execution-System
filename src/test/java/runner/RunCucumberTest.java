@@ -32,6 +32,6 @@ public class RunCucumberTest extends AbstractTestNGCucumberTests{
     public static void tearDown() throws IOException, InterruptedException {
         System.out.println("@AfterClass");
         Runtime.getRuntime().exec("cmd /c start " +System.getProperty("user.dir") + File.separator + ".github" + File.separator + "workflows" + File.separator + "stop_dockergrid.bat");
-        Thread.sleep(5000);
+        Thread.sleep(15000);
     }
 }
