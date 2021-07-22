@@ -1,4 +1,4 @@
-
+@UnitTest
 Feature: Read Maintenance Planning
 
   Background: Below are common steps for every scenario
