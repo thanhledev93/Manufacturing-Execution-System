@@ -16,7 +16,7 @@ Feature: Delete Maintenance Planning System
     And User should not found maintenance planning just deleted in the table
     And close browser
 
-
+  @UnitTest
   Scenario: Delete failed when canceling create operation
     When User choose maintenance planning and click on feature button and choose delete
     Then Display alert message as "Bạn có chắc không"
