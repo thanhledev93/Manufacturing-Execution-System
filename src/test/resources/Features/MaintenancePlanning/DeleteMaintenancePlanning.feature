@@ -1,4 +1,4 @@
-
+@UnitTest
 Feature: Delete Maintenance Planning System
 
   Background: Below are common steps for every scenario
