@@ -1,4 +1,4 @@
-
+@UnitTest
 Feature: Search Maintenance Planning
 
   Background: Below are common steps for every scenario
