@@ -12,7 +12,7 @@ Feature: Read Maintenance Planning
     And Maintenance planning form fields are loaded by default
     # VERIFY:
       # 1. Mã bảo trì | Ngày lập | Xưởng | Chuyền | Ghi chú
-        | KHBT_TEST_DATA | 22.07.2021 | Sản xuất | Cắt phôi | add new |
+        | KHBT_TEST_DATA | 23.07.2021 | Sản xuất | Cắt phôi | add new |
       # 2. Table view  hiển thị 4 thiết bị và table lịch chi tiết hiển thị ngày bảo trì của 7 tháng
 
     When User click on detail button
