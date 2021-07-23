@@ -1,10 +1,10 @@
-@UnitTest
+
 Feature: Search Maintenance Planning
 
   Background: Below are common steps for every scenario
     Given User is on "Kế hoạch bảo trì" page with account "hungnq"
 
-
+  @UnitTest
   Scenario: User found MP in the table when choosing factory and factory line and approval status valid
     When User click on factory field and choose factory as "Sản xuất"
     And User click on factory line field and choose factory line as "Cắt phôi"
