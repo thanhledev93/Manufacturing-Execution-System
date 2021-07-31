@@ -5,7 +5,6 @@ Feature: Delete Maintenance Planning System
     Given User is on "Kế hoạch bảo trì" page with account "hungnq"
     And There is a maintenance plan with status as "Tạo mới"
 
-
   Scenario: Delete maintenance planning
     When User choose maintenance planning and click on feature button and choose delete
     Then Display alert message as "Bạn có chắc không"

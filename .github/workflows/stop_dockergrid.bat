@@ -1,2 +1,2 @@
-cd C:\Users\thanh\Documents\GitHub\Manufacturing-Execution-System\.github\workflows
+cd E:\Manufacturing-Execution-System\.github\workflows
 docker-compose -f docker-compose-v3.yml down
