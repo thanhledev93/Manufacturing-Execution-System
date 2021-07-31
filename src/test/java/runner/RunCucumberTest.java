@@ -21,6 +21,7 @@ public class RunCucumberTest extends AbstractTestNGCucumberTests{
     @BeforeSuite
     public static void setup() throws IOException, InterruptedException {
         System.out.println("setup() running");
+        System.out.println(System.getProperty("user.dir") + File.separator + ".github" + File.separator + "workflows");
         Runtime.getRuntime().exec("cmd /c start " +System.getProperty("user.dir") + File.separator + ".github" + File.separator + "workflows" + File.separator + "start_dockergrid.bat");
         Thread.sleep(60000);
     }
