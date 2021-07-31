@@ -11,7 +11,7 @@
         "steps": [
           {
             "result": {
-              "duration": 11673929900,
+              "duration": 8767580000,
               "status": "passed"
             },
             "line": 5,
@@ -32,7 +32,7 @@
             "after": [
               {
                 "result": {
-                  "duration": 314788600,
+                  "duration": 305572600,
                   "status": "passed"
                 },
                 "match": {
@@ -41,15 +41,44 @@
               }
             ],
             "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2130483800,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User has maintenance planning as \"KHBT_TEST_DATA\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"KHBT_TEST_DATA\"",
+                  "offset": 33
+                }
+              ],
+              "location": "StepDefinitions.MaintenancePlanningSystem.ReadMPStepDefs.user_has_maintenance_planning_as(java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 300758900,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "And "
           }
         ]
       },
       {
-        "start_timestamp": "2021-07-31T02:25:36.846Z",
+        "start_timestamp": "2021-07-31T03:03:17.536Z",
         "before": [
           {
             "result": {
-              "duration": 16572440100,
+              "duration": 10052136500,
               "status": "passed"
             },
             "match": {
@@ -58,9 +87,9 @@
           }
         ],
         "line": 8,
-        "name": "User found MP in the table when choosing factory and factory line and approval status valid",
+        "name": "Read maintenance planning",
         "description": "",
-        "id": "search-maintenance-planning;user-found-mp-in-the-table-when-choosing-factory-and-factory-line-and-approval-status-valid",
+        "id": "read-maintenance-planning;read-maintenance-planning",
         "after": [
           {
             "result": {
@@ -76,24 +105,18 @@
         "steps": [
           {
             "result": {
-              "duration": 2352638600,
+              "duration": 1680451800,
               "status": "passed"
             },
             "line": 9,
-            "name": "User click on factory field and choose factory as \"Sản xuất\"",
+            "name": "User choose maintenance planning and click on feature button and choose view",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"Sản xuất\"",
-                  "offset": 50
-                }
-              ],
-              "location": "StepDefinitions.MaintenancePlanningSystem.SearchMPStepDefs.user_click_on_factory_field_and_choose_factory_as(java.lang.String)"
+              "location": "StepDefinitions.MaintenancePlanningSystem.ReadMPStepDefs.user_choose_maintenance_planning_and_click_on_feature_button_and_choose_view()"
             },
             "after": [
               {
                 "result": {
-                  "duration": 307572100,
+                  "duration": 311502000,
                   "status": "passed"
                 },
                 "match": {
@@ -105,24 +128,18 @@
           },
           {
             "result": {
-              "duration": 1194700300,
+              "duration": 420819800,
               "status": "passed"
             },
             "line": 10,
-            "name": "User click on factory line field and choose factory line as \"Cắt phôi\"",
+            "name": "Open maintenance planning form",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"Cắt phôi\"",
-                  "offset": 60
-                }
-              ],
-              "location": "StepDefinitions.MaintenancePlanningSystem.SearchMPStepDefs.user_click_on_factory_line_field_and_choose_factory_line_as(java.lang.String)"
+              "location": "StepDefinitions.MaintenancePlanningSystem.ReadMPStepDefs.open_maintenance_planning_form()"
             },
             "after": [
               {
                 "result": {
-                  "duration": 301078200,
+                  "duration": 300335600,
                   "status": "passed"
                 },
                 "match": {
@@ -130,28 +147,22 @@
                 }
               }
             ],
-            "keyword": "And "
+            "keyword": "Then "
           },
           {
             "result": {
-              "duration": 1759128100,
+              "duration": 411233300,
               "status": "passed"
             },
             "line": 11,
-            "name": "User click on approval status field and choose status as \"Đã duyệt\"",
+            "name": "Maintenance planning form fields are read-only",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"Đã duyệt\"",
-                  "offset": 57
-                }
-              ],
-              "location": "StepDefinitions.MaintenancePlanningSystem.SearchMPStepDefs.user_click_on_approval_status_field_and_choose_status_as(java.lang.String)"
+              "location": "StepDefinitions.MaintenancePlanningSystem.ReadMPStepDefs.maintenance_planning_form_fields_are_read_only()"
             },
             "after": [
               {
                 "result": {
-                  "duration": 304327800,
+                  "duration": 306781800,
                   "status": "passed"
                 },
                 "match": {
@@ -163,18 +174,18 @@
           },
           {
             "result": {
-              "duration": 144311400,
+              "duration": 339878500,
               "status": "passed"
             },
             "line": 12,
-            "name": "User should found maintenance planning in the table when searching",
+            "name": "Maintenance planning form fields are loaded by default",
             "match": {
-              "location": "StepDefinitions.MaintenancePlanningSystem.SearchMPStepDefs.user_should_found_maintenance_planning_in_the_table_when_searching()"
+              "location": "StepDefinitions.MaintenancePlanningSystem.ReadMPStepDefs.maintenance_planning_form_fields_are_loaded_by_default(io.cucumber.datatable.DataTable)"
             },
             "after": [
               {
                 "result": {
-                  "duration": 308845400,
+                  "duration": 302728700,
                   "status": "passed"
                 },
                 "match": {
@@ -182,394 +193,33 @@
                 }
               }
             ],
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 915552300,
-              "status": "passed"
-            },
-            "line": 13,
-            "name": "close browser",
-            "match": {
-              "location": "StepDefinitions.Auth.LoginStepDefs.close_browser()"
-            },
-            "after": [
+            "rows": [
               {
-                "result": {
-                  "duration": 303657300,
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
-                }
+                "cells": [
+                  "KHBT_TEST_DATA",
+                  "23.07.2021",
+                  "Sản xuất",
+                  "Cắt phôi",
+                  "add new"
+                ]
               }
             ],
             "keyword": "And "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@UnitTest"
-          }
-        ]
-      },
-      {
-        "line": 4,
-        "name": "Below are common steps for every scenario",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 6975799700,
-              "status": "passed"
-            },
-            "line": 5,
-            "name": "User is on \"Kế hoạch bảo trì\" page with account \"hungnq\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Kế hoạch bảo trì\"",
-                  "offset": 11
-                },
-                {
-                  "val": "\"hungnq\"",
-                  "offset": 48
-                }
-              ],
-              "location": "StepDefinitions.MaintenancePlanningSystem.SearchMPStepDefs.user_is_on_page_with_account(java.lang.String,java.lang.String)"
-            },
-            "after": [
-              {
-                "result": {
-                  "duration": 305079800,
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
-                }
-              }
-            ],
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2021-07-31T02:26:13.340Z",
-        "before": [
-          {
-            "result": {
-              "duration": 6178637600,
-              "status": "passed"
-            },
-            "match": {
-              "location": "StepDefinitions.Hooks.setup()"
-            }
-          }
-        ],
-        "line": 16,
-        "name": "User not found MP in the table when enter planning number inValid",
-        "description": "",
-        "id": "search-maintenance-planning;user-not-found-mp-in-the-table-when-enter-planning-number-invalid",
-        "after": [
-          {
-            "result": {
-              "status": "passed"
-            },
-            "match": {
-              "location": "StepDefinitions.Hooks.AfterTest(io.cucumber.java.Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 2043427900,
-              "status": "passed"
-            },
-            "line": 17,
-            "name": "User click on factory field and choose factory as \"Sản xuất\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Sản xuất\"",
-                  "offset": 50
-                }
-              ],
-              "location": "StepDefinitions.MaintenancePlanningSystem.SearchMPStepDefs.user_click_on_factory_field_and_choose_factory_as(java.lang.String)"
-            },
-            "after": [
-              {
-                "result": {
-                  "duration": 312224400,
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
-                }
-              }
-            ],
-            "keyword": "When "
           },
           {
             "result": {
-              "duration": 1362937200,
+              "duration": 466757600,
               "status": "passed"
             },
             "line": 18,
-            "name": "User click on factory line field and choose factory line as \"Cắt phôi\"",
+            "name": "User click on detail button",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"Cắt phôi\"",
-                  "offset": 60
-                }
-              ],
-              "location": "StepDefinitions.MaintenancePlanningSystem.SearchMPStepDefs.user_click_on_factory_line_field_and_choose_factory_line_as(java.lang.String)"
+              "location": "StepDefinitions.MaintenancePlanningSystem.ReadMPStepDefs.user_click_on_detail_button()"
             },
             "after": [
               {
                 "result": {
-                  "duration": 313553600,
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
-                }
-              }
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 1350597500,
-              "status": "passed"
-            },
-            "line": 19,
-            "name": "User click on approval status field and choose status as \"Tất cả\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Tất cả\"",
-                  "offset": 57
-                }
-              ],
-              "location": "StepDefinitions.MaintenancePlanningSystem.SearchMPStepDefs.user_click_on_approval_status_field_and_choose_status_as(java.lang.String)"
-            },
-            "after": [
-              {
-                "result": {
-                  "duration": 307942300,
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
-                }
-              }
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 1068682100,
-              "status": "passed"
-            },
-            "line": 20,
-            "name": "User click on Search field and enter planning number as \"inValue\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"inValue\"",
-                  "offset": 56
-                }
-              ],
-              "location": "StepDefinitions.MaintenancePlanningSystem.SearchMPStepDefs.user_click_on_search_field_and_enter_planning_number_as(java.lang.String)"
-            },
-            "after": [
-              {
-                "result": {
-                  "duration": 300718100,
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
-                }
-              }
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 252430000,
-              "status": "passed"
-            },
-            "line": 21,
-            "name": "User click on search button",
-            "match": {
-              "location": "StepDefinitions.MaintenancePlanningSystem.SearchMPStepDefs.user_click_on_search_button()"
-            },
-            "after": [
-              {
-                "result": {
-                  "duration": 309194600,
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
-                }
-              }
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 10222983700,
-              "status": "passed"
-            },
-            "line": 22,
-            "name": "User should not found maintenance planning in the table when searching",
-            "match": {
-              "location": "StepDefinitions.MaintenancePlanningSystem.SearchMPStepDefs.user_should_not_found_maintenance_planning_in_the_table_when_searching()"
-            },
-            "after": [
-              {
-                "result": {
-                  "duration": 304139900,
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
-                }
-              }
-            ],
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 1606496600,
-              "status": "passed"
-            },
-            "line": 23,
-            "name": "close browser",
-            "match": {
-              "location": "StepDefinitions.Auth.LoginStepDefs.close_browser()"
-            },
-            "after": [
-              {
-                "result": {
-                  "duration": 308468000,
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
-                }
-              }
-            ],
-            "keyword": "And "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@UnitTest"
-          }
-        ]
-      },
-      {
-        "line": 4,
-        "name": "Below are common steps for every scenario",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 6964854300,
-              "status": "passed"
-            },
-            "line": 5,
-            "name": "User is on \"Kế hoạch bảo trì\" page with account \"hungnq\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Kế hoạch bảo trì\"",
-                  "offset": 11
-                },
-                {
-                  "val": "\"hungnq\"",
-                  "offset": 48
-                }
-              ],
-              "location": "StepDefinitions.MaintenancePlanningSystem.SearchMPStepDefs.user_is_on_page_with_account(java.lang.String,java.lang.String)"
-            },
-            "after": [
-              {
-                "result": {
-                  "duration": 310390600,
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
-                }
-              }
-            ],
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2021-07-31T02:26:46.900Z",
-        "before": [
-          {
-            "result": {
-              "duration": 6619504600,
-              "status": "passed"
-            },
-            "match": {
-              "location": "StepDefinitions.Hooks.setup()"
-            }
-          }
-        ],
-        "line": 25,
-        "name": "User found MP in the table with combination of criteria",
-        "description": "",
-        "id": "search-maintenance-planning;user-found-mp-in-the-table-with-combination-of-criteria",
-        "after": [
-          {
-            "result": {
-              "status": "passed"
-            },
-            "match": {
-              "location": "StepDefinitions.Hooks.AfterTest(io.cucumber.java.Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 3174896600,
-              "status": "passed"
-            },
-            "line": 26,
-            "name": "User click on factory field and choose factory as \"Sản xuất\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Sản xuất\"",
-                  "offset": 50
-                }
-              ],
-              "location": "StepDefinitions.MaintenancePlanningSystem.SearchMPStepDefs.user_click_on_factory_field_and_choose_factory_as(java.lang.String)"
-            },
-            "after": [
-              {
-                "result": {
-                  "duration": 315121200,
+                  "duration": 312686800,
                   "status": "passed"
                 },
                 "match": {
@@ -581,128 +231,18 @@
           },
           {
             "result": {
-              "duration": 880428600,
+              "duration": 119401300,
               "status": "passed"
             },
-            "line": 27,
-            "name": "User click on factory line field and choose factory line as \"Cắt phôi\"",
+            "line": 19,
+            "name": "Open detail calendar form and form fields are loaded by default",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"Cắt phôi\"",
-                  "offset": 60
-                }
-              ],
-              "location": "StepDefinitions.MaintenancePlanningSystem.SearchMPStepDefs.user_click_on_factory_line_field_and_choose_factory_line_as(java.lang.String)"
+              "location": "StepDefinitions.MaintenancePlanningSystem.ReadMPStepDefs.open_detail_calendar_form_and_form_fields_are_loaded_by_default()"
             },
             "after": [
               {
                 "result": {
-                  "duration": 307175800,
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
-                }
-              }
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 949922500,
-              "status": "passed"
-            },
-            "line": 28,
-            "name": "User click on approval status field and choose status as \"Tất cả\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Tất cả\"",
-                  "offset": 57
-                }
-              ],
-              "location": "StepDefinitions.MaintenancePlanningSystem.SearchMPStepDefs.user_click_on_approval_status_field_and_choose_status_as(java.lang.String)"
-            },
-            "after": [
-              {
-                "result": {
-                  "duration": 313141200,
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
-                }
-              }
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 545380700,
-              "status": "passed"
-            },
-            "line": 29,
-            "name": "User click on Search field and enter planning number as \"KHBT_TEST_DATA\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"KHBT_TEST_DATA\"",
-                  "offset": 56
-                }
-              ],
-              "location": "StepDefinitions.MaintenancePlanningSystem.SearchMPStepDefs.user_click_on_search_field_and_enter_planning_number_as(java.lang.String)"
-            },
-            "after": [
-              {
-                "result": {
-                  "duration": 301660000,
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
-                }
-              }
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 266360300,
-              "status": "passed"
-            },
-            "line": 30,
-            "name": "User click on search button",
-            "match": {
-              "location": "StepDefinitions.MaintenancePlanningSystem.SearchMPStepDefs.user_click_on_search_button()"
-            },
-            "after": [
-              {
-                "result": {
-                  "duration": 310072600,
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
-                }
-              }
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 141400600,
-              "status": "passed"
-            },
-            "line": 31,
-            "name": "User should found maintenance planning in the table when searching",
-            "match": {
-              "location": "StepDefinitions.MaintenancePlanningSystem.SearchMPStepDefs.user_should_found_maintenance_planning_in_the_table_when_searching()"
-            },
-            "after": [
-              {
-                "result": {
-                  "duration": 313959100,
+                  "duration": 306452200,
                   "status": "passed"
                 },
                 "match": {
@@ -714,10 +254,101 @@
           },
           {
             "result": {
-              "duration": 726425800,
+              "duration": 364139100,
               "status": "passed"
             },
-            "line": 32,
+            "line": 20,
+            "name": "User click on close button in detail calendar form",
+            "match": {
+              "location": "StepDefinitions.MaintenancePlanningSystem.ReadMPStepDefs.user_click_on_close_button_in_detail_calendar_form()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 308095800,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 6047134100,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "Close detail calendar form",
+            "match": {
+              "location": "StepDefinitions.MaintenancePlanningSystem.ReadMPStepDefs.close_detail_calendar_form()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 302539200,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 299053100,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "User click on close button in maintenance planning form",
+            "match": {
+              "location": "StepDefinitions.MaintenancePlanningSystem.ReadMPStepDefs.user_click_on_close_button_in_maintenance_planning_form()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 306401600,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "Close maintenance planning form",
+            "match": {
+              "location": "StepDefinitions.MaintenancePlanningSystem.ReadMPStepDefs.close_maintenance_planning_form()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 300856300,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1461960700,
+              "status": "passed"
+            },
+            "line": 24,
             "name": "close browser",
             "match": {
               "location": "StepDefinitions.Auth.LoginStepDefs.close_browser()"
@@ -725,7 +356,7 @@
             "after": [
               {
                 "result": {
-                  "duration": 308319700,
+                  "duration": 306155200,
                   "status": "passed"
                 },
                 "match": {
@@ -743,11 +374,11 @@
         ]
       }
     ],
-    "name": "Search Maintenance Planning",
+    "name": "Read Maintenance Planning",
     "description": "",
-    "id": "search-maintenance-planning",
+    "id": "read-maintenance-planning",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/MaintenancePlanning/SearchMaintenancePlanning.feature",
+    "uri": "file:src/test/resources/features/MaintenancePlanning/ReadMaintenancePlanning.feature",
     "tags": [
       {
         "name": "@UnitTest",
@@ -759,7 +390,7 @@
       }
     ]
   }
-]mn": 1
+]: 1
         }
       }
     ]
