@@ -1,4 +1,4 @@
-
+@UnitTest
 Feature: Approval Maintenance Planning
   Background: Below are common steps for every scenario
     Given User is on "Kế hoạch bảo trì" page with account "hungnq"

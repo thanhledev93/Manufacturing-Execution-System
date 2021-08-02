@@ -26,7 +26,7 @@ public class ReadMPStepDefs extends BaseClass {
     public void user_has_maintenance_planning_as(String planNum) {
             mpSearch.enterPlanNumber(planNum);
             mpSearch.clickOnSearchButton();
-//            Assert.assertTrue("Not found maintenance planning", mpMainTable.getNoOfRows() > 0);
+            Assert.assertTrue(mpMainTable.getNoOfRows() > 0, "Not found maintenance planning");
     }
 
     @When("User choose maintenance planning and click on feature button and choose view")
@@ -37,12 +37,12 @@ public class ReadMPStepDefs extends BaseClass {
     @Then("Open maintenance planning form")
     public void open_maintenance_planning_form() {
         boolean isFormDisplay = mpMaintenancePlanning.verifyOpenMPForm();
-//        Assert.assertTrue("Maintenance planning form not opened", isFormDisplay);
+        Assert.assertTrue(isFormDisplay, "Maintenance planning form not opened");
     }
     @Then("Maintenance planning form fields are read-only")
     public void maintenance_planning_form_fields_are_read_only() {
         boolean isReadOnly = mpMaintenancePlanning.verifyReadOnly();
-//        Assert.assertTrue("There is a field that is not assigned read-only attribute", isReadOnly);
+        Assert.assertTrue(isReadOnly, "There is a field that is not assigned read-only attribute");
     }
 
     @Then("Maintenance planning form fields are loaded by default")
@@ -50,7 +50,7 @@ public class ReadMPStepDefs extends BaseClass {
         List<List<String>> dTbl = dataTable.asLists();
         boolean isLoad = mpMaintenancePlanning.showDefaultValues(dTbl.get(0));
         boolean tblDataLoaded = mpMaintenancePlanning.getTblRows() == 4;
-//        Assert.assertTrue("Value of fields are not loaded by default", isLoad && tblDataLoaded);
+        Assert.assertTrue(isLoad && tblDataLoaded, "Value of fields are not loaded by default");
     }
     @When("User click on detail button")
     public void user_click_on_detail_button() {
@@ -60,7 +60,7 @@ public class ReadMPStepDefs extends BaseClass {
     @Then("Open detail calendar form and form fields are loaded by default")
     public void open_detail_calendar_form_and_form_fields_are_loaded_by_default() {
        boolean tblDataLoaded = mpDetailCalendar.getTblRows() == 7;
-//       Assert.assertTrue("Detail calendar form fields are loaded by default", tblDataLoaded);
+       Assert.assertTrue(tblDataLoaded, "Detail calendar form fields are loaded by default");
     }
     @When("User click on close button in detail calendar form")
     public void user_click_on_close_button_in_detail_calendar_form() {
@@ -70,9 +70,8 @@ public class ReadMPStepDefs extends BaseClass {
     @Then("Close detail calendar form")
     public void close_detail_calendar_form() throws InterruptedException {
         Thread.sleep(1000);
-
         boolean isCloseDCForm = mpDetailCalendar.verifyOpenMPForm();
-//        Assert.assertTrue("Detail calendar form is not closed", isCloseDCForm);
+        Assert.assertTrue(isCloseDCForm, "Detail calendar form is not closed");
     }
 
     @When("User click on close button in maintenance planning form")
@@ -82,9 +81,9 @@ public class ReadMPStepDefs extends BaseClass {
     @Then("Close maintenance planning form")
     public void close_maintenance_planning_form() {
         try {
-//            Assert.assertTrue("Form is not closed", baseObjectPage.getHeaderPage().isDisplayed());
+            Assert.assertTrue(baseObjectPage.getHeaderPage().isDisplayed(), "Form is not closed");
         } catch (Exception e) {
-//            Assert.assertTrue("Form is not closed",false);
+            Assert.assertTrue(false, "Form is not closed");
         }
     }
 }

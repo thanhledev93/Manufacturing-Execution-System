@@ -30,7 +30,7 @@ public class ApprovalMPStepDefs extends BaseClass {
     @Then("User should found approval process info in the table")
     public void user_should_found_approval_process_info_in_the_table() {
         boolean isDisplay = baseObjectPage.verifyDisplayArpProcessInfo();;
-//        Assert.assertTrue("Approval process info not display", isDisplay);
+        Assert.assertTrue(isDisplay, "Approval process info not display");
     }
     @When("User click on submit approval process button")
     public void user_click_on_submit_approval_process_button() {
@@ -39,13 +39,13 @@ public class ApprovalMPStepDefs extends BaseClass {
     @Then("Close view form")
     public void close_view_form() {
         boolean isDisplay = baseObjectPage.verifyDisplayApprovalForm();;
-//        Assert.assertFalse("Approval form can't closed", isDisplay);
+        Assert.assertFalse(isDisplay, "Approval form can't closed");
     }
     @Then("User should found maintenance planning in the table with status {string}")
     public void user_should_found_maintenance_planning_in_the_table_with_status(String status) {
         mpSearch.chooseStatus(status);
         boolean isContent = mpMainTable.verifyApprovalStatus(status);
-//        Assert.assertTrue("Not found maintenance planning", isContent);
+        Assert.assertTrue(isContent, "Not found maintenance planning");
     }
 
     //*****************************

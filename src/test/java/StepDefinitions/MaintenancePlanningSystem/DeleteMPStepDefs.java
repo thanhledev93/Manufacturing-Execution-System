@@ -9,11 +9,6 @@ import pageObjects.BaseObjectPage;
 import pageObjects.MaintenancePlanningSystem.MP_MainTablePage;
 import pageObjects.MaintenancePlanningSystem.MP_SearchFormPage;
 
-import java.util.concurrent.TimeUnit;
-
-import static org.awaitility.Awaitility.await;
-
-
 public class DeleteMPStepDefs extends BaseClass {
     public DeleteMPStepDefs() {
         mpSearch = new MP_SearchFormPage();
@@ -21,27 +16,25 @@ public class DeleteMPStepDefs extends BaseClass {
         baseObjectPage = new BaseObjectPage();
     }
     @Given("There is a maintenance plan with status as {string}")
-    public void there_is_a_maintenance_plan_with_status_as(String status) throws InterruptedException {
+    public void there_is_a_maintenance_plan_with_status_as(String status) {
         mpSearch.chooseFact("Sản xuất");
         mpSearch.chooseFactLine("Cắt phôi");
-
         mpSearch.chooseStatus(status);
 
-//        Assert.assertTrue("Not found maintenance planning", mpMainTable.getNoOfRows() > 0);
+        Assert.assertTrue(mpMainTable.getNoOfRows() > 0, "Not found maintenance planning");
 
     }
 
     @When("User choose maintenance planning and click on feature button and choose delete")
     public void user_choose_maintenance_planning_and_click_on_feature_button_and_choose_delete() throws InterruptedException {
-//        Thread.sleep(1000);
-        await().atMost(5000, TimeUnit.SECONDS);
+        Thread.sleep(1000);
         mpMainTable.clickOnFeatureButtonInFirstRow();
         mpMainTable.clickOnDeleteButton();
     }
     @Then("User should not found maintenance planning just deleted in the table")
-    public void user_should_not_found_maintenance_planning_just_deleted_in_the_table() throws InterruptedException {
+    public void user_should_not_found_maintenance_planning_just_deleted_in_the_table() {
         int isContent = mpMainTable.getRowIndex();
-//        Assert.assertTrue("Found maintenance planning", isContent == -1);
+        Assert.assertTrue(isContent == -1, "Found maintenance planning");
     }
 
     //****************************
@@ -53,7 +46,7 @@ public class DeleteMPStepDefs extends BaseClass {
     @When("User should found maintenance planning just deleted in the table")
     public void user_should_found_maintenance_planning_just_deleted_in_the_table() {
         int isContent = mpMainTable.getRowIndex();
-//        Assert.assertTrue("Not found maintenance planning", isContent != -1);
+        Assert.assertTrue(isContent != -1, "Not found maintenance planning");
     }
 
 

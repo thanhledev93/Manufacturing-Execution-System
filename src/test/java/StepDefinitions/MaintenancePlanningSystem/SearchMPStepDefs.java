@@ -5,7 +5,6 @@ import StepDefinitions.BaseClass;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.awaitility.Durations;
 import org.testng.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -17,7 +16,6 @@ import pageObjects.MaintenancePlanningSystem.MP_SearchFormPage;
 import java.util.concurrent.TimeUnit;
 
 import static org.awaitility.Awaitility.*;
-import static org.awaitility.Durations.*;
 
 
 public class SearchMPStepDefs extends BaseClass {
@@ -70,7 +68,7 @@ public class SearchMPStepDefs extends BaseClass {
     public void user_should_found_maintenance_planning_in_the_table_when_searching() {
         await().atMost(5000, TimeUnit.SECONDS).untilAsserted(()
                 -> Assert.assertEquals(mpMainTable.getNoOfRows() > 0, true, "Not found maintenance planning"));
-//        Assert.assertTrue(, true);
+
     }
 
 //    Scenario: User not found MP in the table when enter planning number inValid.
@@ -89,7 +87,6 @@ public class SearchMPStepDefs extends BaseClass {
         await().atMost(5000, TimeUnit.SECONDS).untilAsserted(()
                 -> Assert.assertEquals( 0, mpMainTable.getNoOfRows(),"Found maintenance planning"));
         System.out.println(mpMainTable.getNoOfRows());
-//        Assert.assertTrue("Found maintenance planning", mpMainTable.getNoOfRows() == 0);
     }
 
 }
