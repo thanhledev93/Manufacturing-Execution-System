@@ -11,20 +11,20 @@
         "steps": [
           {
             "result": {
-              "duration": 8767580000,
+              "duration": 989000,
               "status": "passed"
             },
             "line": 5,
-            "name": "User is on \"Kế hoạch bảo trì\" page with account \"hungnq\"",
+            "name": "User is on \"Đơn hàng bán\" page with account \"administrator\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Kế hoạch bảo trì\"",
+                  "val": "\"Đơn hàng bán\"",
                   "offset": 11
                 },
                 {
-                  "val": "\"hungnq\"",
-                  "offset": 48
+                  "val": "\"administrator\"",
+                  "offset": 44
                 }
               ],
               "location": "StepDefinitions.MaintenancePlanningSystem.SearchMPStepDefs.user_is_on_page_with_account(java.lang.String,java.lang.String)"
@@ -32,7 +32,6 @@
             "after": [
               {
                 "result": {
-                  "duration": 305572600,
                   "status": "passed"
                 },
                 "match": {
@@ -41,44 +40,15 @@
               }
             ],
             "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 2130483800,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "User has maintenance planning as \"KHBT_TEST_DATA\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"KHBT_TEST_DATA\"",
-                  "offset": 33
-                }
-              ],
-              "location": "StepDefinitions.MaintenancePlanningSystem.ReadMPStepDefs.user_has_maintenance_planning_as(java.lang.String)"
-            },
-            "after": [
-              {
-                "result": {
-                  "duration": 300758900,
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
-                }
-              }
-            ],
-            "keyword": "And "
           }
         ]
       },
       {
-        "start_timestamp": "2021-07-31T03:03:17.536Z",
+        "start_timestamp": "2021-08-03T08:52:51.617Z",
         "before": [
           {
             "result": {
-              "duration": 10052136500,
+              "duration": 3002800,
               "status": "passed"
             },
             "match": {
@@ -87,9 +57,9 @@
           }
         ],
         "line": 8,
-        "name": "Read maintenance planning",
+        "name": "SO should appear in the SO list when searching with valid value",
         "description": "",
-        "id": "read-maintenance-planning;read-maintenance-planning",
+        "id": "search-business-sale-order;so-should-appear-in-the-so-list-when-searching-with-valid-value",
         "after": [
           {
             "result": {
@@ -105,87 +75,14 @@
         "steps": [
           {
             "result": {
-              "duration": 1680451800,
-              "status": "passed"
+              "status": "undefined"
             },
             "line": 9,
-            "name": "User choose maintenance planning and click on feature button and choose view",
-            "match": {
-              "location": "StepDefinitions.MaintenancePlanningSystem.ReadMPStepDefs.user_choose_maintenance_planning_and_click_on_feature_button_and_choose_view()"
-            },
+            "name": "User search a SO with",
+            "match": {},
             "after": [
               {
                 "result": {
-                  "duration": 311502000,
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
-                }
-              }
-            ],
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 420819800,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "Open maintenance planning form",
-            "match": {
-              "location": "StepDefinitions.MaintenancePlanningSystem.ReadMPStepDefs.open_maintenance_planning_form()"
-            },
-            "after": [
-              {
-                "result": {
-                  "duration": 300335600,
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
-                }
-              }
-            ],
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 411233300,
-              "status": "passed"
-            },
-            "line": 11,
-            "name": "Maintenance planning form fields are read-only",
-            "match": {
-              "location": "StepDefinitions.MaintenancePlanningSystem.ReadMPStepDefs.maintenance_planning_form_fields_are_read_only()"
-            },
-            "after": [
-              {
-                "result": {
-                  "duration": 306781800,
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
-                }
-              }
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 339878500,
-              "status": "passed"
-            },
-            "line": 12,
-            "name": "Maintenance planning form fields are loaded by default",
-            "match": {
-              "location": "StepDefinitions.MaintenancePlanningSystem.ReadMPStepDefs.maintenance_planning_form_fields_are_loaded_by_default(io.cucumber.datatable.DataTable)"
-            },
-            "after": [
-              {
-                "result": {
-                  "duration": 302728700,
                   "status": "passed"
                 },
                 "match": {
@@ -196,54 +93,30 @@
             "rows": [
               {
                 "cells": [
-                  "KHBT_TEST_DATA",
-                  "23.07.2021",
-                  "Sản xuất",
-                  "Cắt phôi",
-                  "add new"
+                  "customer",
+                  "status"
+                ]
+              },
+              {
+                "cells": [
+                  "DAE WON CHONG UP CORPORATION",
+                  "Đã duyệt"
                 ]
               }
             ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 466757600,
-              "status": "passed"
-            },
-            "line": 18,
-            "name": "User click on detail button",
-            "match": {
-              "location": "StepDefinitions.MaintenancePlanningSystem.ReadMPStepDefs.user_click_on_detail_button()"
-            },
-            "after": [
-              {
-                "result": {
-                  "duration": 312686800,
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
-                }
-              }
-            ],
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 119401300,
-              "status": "passed"
+              "status": "skipped"
             },
-            "line": 19,
-            "name": "Open detail calendar form and form fields are loaded by default",
-            "match": {
-              "location": "StepDefinitions.MaintenancePlanningSystem.ReadMPStepDefs.open_detail_calendar_form_and_form_fields_are_loaded_by_default()"
-            },
+            "line": 12,
+            "name": "SO should appear in the SO list",
+            "match": {},
             "after": [
               {
                 "result": {
-                  "duration": 306452200,
-                  "status": "passed"
+                  "status": "skipped"
                 },
                 "match": {
                   "location": "StepDefinitions.Hooks.DelayAfterStep()"
@@ -254,101 +127,9 @@
           },
           {
             "result": {
-              "duration": 364139100,
-              "status": "passed"
+              "status": "skipped"
             },
-            "line": 20,
-            "name": "User click on close button in detail calendar form",
-            "match": {
-              "location": "StepDefinitions.MaintenancePlanningSystem.ReadMPStepDefs.user_click_on_close_button_in_detail_calendar_form()"
-            },
-            "after": [
-              {
-                "result": {
-                  "duration": 308095800,
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
-                }
-              }
-            ],
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 6047134100,
-              "status": "passed"
-            },
-            "line": 21,
-            "name": "Close detail calendar form",
-            "match": {
-              "location": "StepDefinitions.MaintenancePlanningSystem.ReadMPStepDefs.close_detail_calendar_form()"
-            },
-            "after": [
-              {
-                "result": {
-                  "duration": 302539200,
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
-                }
-              }
-            ],
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 299053100,
-              "status": "passed"
-            },
-            "line": 22,
-            "name": "User click on close button in maintenance planning form",
-            "match": {
-              "location": "StepDefinitions.MaintenancePlanningSystem.ReadMPStepDefs.user_click_on_close_button_in_maintenance_planning_form()"
-            },
-            "after": [
-              {
-                "result": {
-                  "duration": 306401600,
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
-                }
-              }
-            ],
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 23,
-            "name": "Close maintenance planning form",
-            "match": {
-              "location": "StepDefinitions.MaintenancePlanningSystem.ReadMPStepDefs.close_maintenance_planning_form()"
-            },
-            "after": [
-              {
-                "result": {
-                  "duration": 300856300,
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
-                }
-              }
-            ],
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 1461960700,
-              "status": "passed"
-            },
-            "line": 24,
+            "line": 13,
             "name": "close browser",
             "match": {
               "location": "StepDefinitions.Auth.LoginStepDefs.close_browser()"
@@ -356,8 +137,7 @@
             "after": [
               {
                 "result": {
-                  "duration": 306155200,
-                  "status": "passed"
+                  "status": "skipped"
                 },
                 "match": {
                   "location": "StepDefinitions.Hooks.DelayAfterStep()"
@@ -369,30 +149,16 @@
         ],
         "tags": [
           {
-            "name": "@UnitTest"
+            "name": "@Integration"
           }
         ]
       }
     ],
-    "name": "Read Maintenance Planning",
+    "name": "Search Business Sale Order",
     "description": "",
-    "id": "read-maintenance-planning",
+    "id": "search-business-sale-order",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/MaintenancePlanning/ReadMaintenancePlanning.feature",
-    "tags": [
-      {
-        "name": "@UnitTest",
-        "type": "Tag",
-        "location": {
-          "line": 1,
-          "column": 1
-        }
-      }
-    ]
-  }
-]: 1
-        }
-      }
-    ]
+    "uri": "file:src/test/resources/features/business_sale_order/search_SO.feature",
+    "tags": []
   }
 ]

@@ -7,16 +7,8 @@ import io.cucumber.java.Scenario;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.testng.Reporter;
-import org.testng.annotations.Parameters;
 import runner.WebDriverFactory;
-
-
-import java.io.File;
-import java.io.IOException;
 import java.net.MalformedURLException;
-import java.util.concurrent.TimeUnit;
-
-import static org.awaitility.Awaitility.await;
 
 public class Hooks extends BaseClass {
     @Before

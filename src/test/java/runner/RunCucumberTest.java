@@ -12,10 +12,10 @@ import java.io.IOException;
 @CucumberOptions(
         features = {"src/test/resources/features"},
         plugin = {"json:target/cucumber.json"},
-        dryRun = false,
+        dryRun = true,
         monochrome = true,
         glue = {"StepDefinitions"},
-        tags = "@UnitTest"
+        tags = "@Integration"
 )
 public class RunCucumberTest extends AbstractTestNGCucumberTests{
     @BeforeSuite
