@@ -11,7 +11,217 @@
         "steps": [
           {
             "result": {
-              "duration": 989000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User is on \"Kế hoạch bảo trì\" page with account \"hungnq\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Kế hoạch bảo trì\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"hungnq\"",
+                  "offset": 48
+                }
+              ],
+              "location": "StepDefinitions.MaintenancePlanningSystem.SearchMPStepDefs.user_is_on_page_with_account(java.lang.String,java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-08-18T09:08:08.045Z",
+        "before": [
+          {
+            "result": {
+              "duration": 13000400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitions.Hooks.setup()"
+            }
+          }
+        ],
+        "line": 8,
+        "name": "User found MP in the table when choosing factory and factory line and approval status valid",
+        "description": "",
+        "id": "search-maintenance-planning;user-found-mp-in-the-table-when-choosing-factory-and-factory-line-and-approval-status-valid",
+        "after": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitions.Hooks.AfterTest(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "User click on factory field and choose factory as \"Sản xuất\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Sản xuất\"",
+                  "offset": 50
+                }
+              ],
+              "location": "StepDefinitions.MaintenancePlanningSystem.SearchMPStepDefs.user_click_on_factory_field_and_choose_factory_as(java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "User click on factory line field and choose factory line as \"Cắt phôi\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Cắt phôi\"",
+                  "offset": 60
+                }
+              ],
+              "location": "StepDefinitions.MaintenancePlanningSystem.SearchMPStepDefs.user_click_on_factory_line_field_and_choose_factory_line_as(java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "User click on approval status field and choose status as \"Đã duyệt\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Đã duyệt\"",
+                  "offset": 57
+                }
+              ],
+              "location": "StepDefinitions.MaintenancePlanningSystem.SearchMPStepDefs.user_click_on_approval_status_field_and_choose_status_as(java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "User should found maintenance planning in the table when searching",
+            "match": {
+              "location": "StepDefinitions.MaintenancePlanningSystem.SearchMPStepDefs.user_should_found_maintenance_planning_in_the_table_when_searching()"
+            },
+            "after": [
+              {
+                "result": {
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "close browser",
+            "match": {
+              "location": "StepDefinitions.Auth.LoginStepDefs.close_browser()"
+            },
+            "after": [
+              {
+                "result": {
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Integration"
+          }
+        ]
+      }
+    ],
+    "name": "Search Maintenance Planning",
+    "description": "",
+    "id": "search-maintenance-planning",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/MaintenancePlanning/SearchMaintenancePlanning.feature",
+    "tags": []
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "Below are common steps for every scenario",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
               "status": "passed"
             },
             "line": 5,
@@ -44,11 +254,10 @@
         ]
       },
       {
-        "start_timestamp": "2021-08-03T08:52:51.617Z",
+        "start_timestamp": "2021-08-18T09:08:08.227Z",
         "before": [
           {
             "result": {
-              "duration": 3002800,
               "status": "passed"
             },
             "match": {
@@ -78,7 +287,7 @@
               "status": "undefined"
             },
             "line": 9,
-            "name": "User search a SO with",
+            "name": "User search a SO with customer and status",
             "match": {},
             "after": [
               {
@@ -93,12 +302,6 @@
             "rows": [
               {
                 "cells": [
-                  "customer",
-                  "status"
-                ]
-              },
-              {
-                "cells": [
                   "DAE WON CHONG UP CORPORATION",
                   "Đã duyệt"
                 ]
@@ -110,9 +313,11 @@
             "result": {
               "status": "skipped"
             },
-            "line": 12,
+            "line": 11,
             "name": "SO should appear in the SO list",
-            "match": {},
+            "match": {
+              "location": "StepDefinitions.business_sale_order.search_SO_StepDefs.so_should_appear_in_the_so_list()"
+            },
             "after": [
               {
                 "result": {
@@ -129,7 +334,7 @@
             "result": {
               "status": "skipped"
             },
-            "line": 13,
+            "line": 12,
             "name": "close browser",
             "match": {
               "location": "StepDefinitions.Auth.LoginStepDefs.close_browser()"

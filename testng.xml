@@ -9,13 +9,13 @@
         </classes>
     </test>
 
-    <test name="Firefox" >
-        <parameter name="browserName" value="firefox" />
-        <classes>
-            <class name="runner.RunCucumberTest" />
-<!--            <class name="TestPackage.SampleTest2" />-->
-        </classes>
-    </test>
+<!--    <test name="Firefox" >-->
+<!--        <parameter name="browserName" value="firefox" />-->
+<!--        <classes>-->
+<!--            <class name="runner.RunCucumberTest" />-->
+<!--&lt;!&ndash;            <class name="TestPackage.SampleTest2" />&ndash;&gt;-->
+<!--        </classes>-->
+<!--    </test>-->
 
 <!--    <test name="Regression1">-->
 <!--        <classes>-->
