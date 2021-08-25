@@ -24,7 +24,7 @@ Feature: Department
       | Phòng ban 3 | phòng ban 3 note |
 
   @create
-  Scenario: Create department with name is blank
+  Scenario: Create department failed with name is blank
     When User click on create department button
     Then Open department form
     When User enter note "phòng ban note"
@@ -33,7 +33,7 @@ Feature: Department
     And close browser
 
   @create
-  Scenario Outline: Create department with name already exist
+  Scenario Outline: Create department failed with name already exist
     When User click on create department button
     Then Open department form
     When User enter department name "<name>" and note "<note>"
@@ -45,7 +45,7 @@ Feature: Department
       | Phòng ban 1 | phòng ban 1 note |
 
   @create
-  Scenario Outline: Create failed when canceling create operation
+  Scenario Outline: Create department failed when canceling create operation
     When User click on create department button
     Then Open department form
     When User enter department name "<name>" and note "<note>"
@@ -113,7 +113,7 @@ Feature: Department
 
 # SEARCH DEPARTMENT
   @search
-  Scenario Outline: Department not appear in the department list when searching with invalid value
+  Scenario Outline: Search department with invalid value
     When User search a department with "<name>" and "<status>"
     Then User should not found department with "<name>" and "<note>" in the list
     And close browser
@@ -122,7 +122,7 @@ Feature: Department
       | inValid     | invalid note    | Sử dụng       |
 
   @search
-  Scenario Outline: Department should appear in the department list when searching with valid value
+  Scenario Outline: Search department with valid value
     When User search a department with "<name>" and "<status>"
     Then User should found department with "<name>" and "<note>" in the list
     And close browser
@@ -150,7 +150,7 @@ Feature: Department
       | Phòng ban 1 | phòng ban 1 note | Phòng ban 1 - updated   | phòng ban 1 note - updated |
 
   @update
-  Scenario Outline: Update department with name is blank
+  Scenario Outline: Update department failed with name is blank
     When User choose department "<name>" and choose update
     Then Open department form
     And Department form fields "<name>" and "<note>" are loaded by default
@@ -164,7 +164,7 @@ Feature: Department
       | Phòng ban 2 | phòng ban 2 note | phòng ban 2 note - updated |
 
   @update
-  Scenario Outline: Update department with name already exist
+  Scenario Outline: Update department failed with name already exist
     When User choose department "<name>" and choose update
     Then Open department form
     And Department form fields "<name>" and "<note>" are loaded by default
@@ -202,6 +202,3 @@ Feature: Department
     Examples:
       | name        | note             | name_updated            | note_updated               |
       | Phòng ban 3 | phòng ban 3 note | Phòng ban 3 - updated   | phòng ban 3 note - updated |
-
-
-
