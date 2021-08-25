@@ -1,247 +1,42 @@
 [
   {
-    "line": 2,
+    "line": 3,
     "elements": [
       {
-        "line": 4,
-        "name": "Below are common steps for every scenario",
+        "line": 5,
+        "name": "",
         "description": "",
         "type": "background",
         "keyword": "Background",
         "steps": [
           {
             "result": {
+              "duration": 4429403700,
               "status": "passed"
             },
-            "line": 5,
-            "name": "User is on \"Kế hoạch bảo trì\" page with account \"hungnq\"",
+            "line": 6,
+            "name": "User is on \"Phòng ban\" page with account \"administrator\" and password \"123456@#\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Kế hoạch bảo trì\"",
-                  "offset": 11
-                },
-                {
-                  "val": "\"hungnq\"",
-                  "offset": 48
-                }
-              ],
-              "location": "StepDefinitions.MaintenancePlanningSystem.SearchMPStepDefs.user_is_on_page_with_account(java.lang.String,java.lang.String)"
-            },
-            "after": [
-              {
-                "result": {
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
-                }
-              }
-            ],
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2021-08-18T09:08:08.045Z",
-        "before": [
-          {
-            "result": {
-              "duration": 13000400,
-              "status": "passed"
-            },
-            "match": {
-              "location": "StepDefinitions.Hooks.setup()"
-            }
-          }
-        ],
-        "line": 8,
-        "name": "User found MP in the table when choosing factory and factory line and approval status valid",
-        "description": "",
-        "id": "search-maintenance-planning;user-found-mp-in-the-table-when-choosing-factory-and-factory-line-and-approval-status-valid",
-        "after": [
-          {
-            "result": {
-              "status": "passed"
-            },
-            "match": {
-              "location": "StepDefinitions.Hooks.AfterTest(io.cucumber.java.Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 9,
-            "name": "User click on factory field and choose factory as \"Sản xuất\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Sản xuất\"",
-                  "offset": 50
-                }
-              ],
-              "location": "StepDefinitions.MaintenancePlanningSystem.SearchMPStepDefs.user_click_on_factory_field_and_choose_factory_as(java.lang.String)"
-            },
-            "after": [
-              {
-                "result": {
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
-                }
-              }
-            ],
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "User click on factory line field and choose factory line as \"Cắt phôi\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Cắt phôi\"",
-                  "offset": 60
-                }
-              ],
-              "location": "StepDefinitions.MaintenancePlanningSystem.SearchMPStepDefs.user_click_on_factory_line_field_and_choose_factory_line_as(java.lang.String)"
-            },
-            "after": [
-              {
-                "result": {
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
-                }
-              }
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 11,
-            "name": "User click on approval status field and choose status as \"Đã duyệt\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Đã duyệt\"",
-                  "offset": 57
-                }
-              ],
-              "location": "StepDefinitions.MaintenancePlanningSystem.SearchMPStepDefs.user_click_on_approval_status_field_and_choose_status_as(java.lang.String)"
-            },
-            "after": [
-              {
-                "result": {
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
-                }
-              }
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 12,
-            "name": "User should found maintenance planning in the table when searching",
-            "match": {
-              "location": "StepDefinitions.MaintenancePlanningSystem.SearchMPStepDefs.user_should_found_maintenance_planning_in_the_table_when_searching()"
-            },
-            "after": [
-              {
-                "result": {
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
-                }
-              }
-            ],
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 13,
-            "name": "close browser",
-            "match": {
-              "location": "StepDefinitions.Auth.LoginStepDefs.close_browser()"
-            },
-            "after": [
-              {
-                "result": {
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
-                }
-              }
-            ],
-            "keyword": "And "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@Integration"
-          }
-        ]
-      }
-    ],
-    "name": "Search Maintenance Planning",
-    "description": "",
-    "id": "search-maintenance-planning",
-    "keyword": "Feature",
-    "uri": "file:src/test/resources/features/MaintenancePlanning/SearchMaintenancePlanning.feature",
-    "tags": []
-  },
-  {
-    "line": 2,
-    "elements": [
-      {
-        "line": 4,
-        "name": "Below are common steps for every scenario",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 5,
-            "name": "User is on \"Đơn hàng bán\" page with account \"administrator\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Đơn hàng bán\"",
+                  "val": "\"Phòng ban\"",
                   "offset": 11
                 },
                 {
                   "val": "\"administrator\"",
-                  "offset": 44
+                  "offset": 41
+                },
+                {
+                  "val": "\"123456@#\"",
+                  "offset": 70
                 }
               ],
-              "location": "StepDefinitions.MaintenancePlanningSystem.SearchMPStepDefs.user_is_on_page_with_account(java.lang.String,java.lang.String)"
+              "location": "StepDefinitions.system.department_stepdefs.user_is_on_page_with_account_and_password(java.lang.String,java.lang.String,java.lang.String)"
             },
             "after": [
               {
                 "result": {
+                  "duration": 305770300,
                   "status": "passed"
                 },
                 "match": {
@@ -254,10 +49,11 @@
         ]
       },
       {
-        "start_timestamp": "2021-08-18T09:08:08.227Z",
+        "start_timestamp": "2021-08-25T11:17:32.262Z",
         "before": [
           {
             "result": {
+              "duration": 2407167000,
               "status": "passed"
             },
             "match": {
@@ -265,10 +61,1005 @@
             }
           }
         ],
-        "line": 8,
-        "name": "SO should appear in the SO list when searching with valid value",
+        "line": 22,
+        "name": "Create department successful with valid value",
         "description": "",
-        "id": "search-business-sale-order;so-should-appear-in-the-so-list-when-searching-with-valid-value",
+        "id": "department;create-department-successful-with-valid-value;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 5975600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitions.Hooks.AfterTest(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 470996500,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "User click on create department button",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.user_click_on_create_department_button()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 301100400,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 50738900,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "Open department form",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.open_department_form()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 309454900,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 539252800,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "User enter department name \"Phòng ban 1\" and note \"phòng ban 1 note\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Phòng ban 1\"",
+                  "offset": 27
+                },
+                {
+                  "val": "\"phòng ban 1 note\"",
+                  "offset": 50
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.user_enter_department_name_and_note(java.lang.String,java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 302895100,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 183170700,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "User click on save button in department form",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.user_click_on_save_button_in_department_form()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 303999200,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 260988700,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "Display alert message \"Lưu thành công\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Lưu thành công\"",
+                  "offset": 22
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.display_alert_message(java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 304355700,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 156235500,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "User click on confirm button",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.user_click_on_confirm_button()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 309577200,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5184988600,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "Close alert message",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.close_alert_message()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 301995800,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1653169900,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "User should found department with \"Phòng ban 1\" and \"phòng ban 1 note\" in the list",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Phòng ban 1\"",
+                  "offset": 34
+                },
+                {
+                  "val": "\"phòng ban 1 note\"",
+                  "offset": 52
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.user_should_found_department_with_and_in_the_list(java.lang.String,java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 301997400,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1056880800,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "close browser",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.close_browser()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 311141300,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@UAT_Testing"
+          },
+          {
+            "name": "@create"
+          },
+          {
+            "name": "@update"
+          },
+          {
+            "name": "@delete"
+          },
+          {
+            "name": "@revert"
+          },
+          {
+            "name": "@search"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 4611479700,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User is on \"Phòng ban\" page with account \"administrator\" and password \"123456@#\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Phòng ban\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"administrator\"",
+                  "offset": 41
+                },
+                {
+                  "val": "\"123456@#\"",
+                  "offset": 70
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.user_is_on_page_with_account_and_password(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 304997400,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-08-25T11:17:51.792Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1621745500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitions.Hooks.setup()"
+            }
+          }
+        ],
+        "line": 23,
+        "name": "Create department successful with valid value",
+        "description": "",
+        "id": "department;create-department-successful-with-valid-value;;3",
+        "after": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitions.Hooks.AfterTest(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 381468800,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "User click on create department button",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.user_click_on_create_department_button()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 313132100,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 47971500,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "Open department form",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.open_department_form()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 309842500,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 566978600,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "User enter department name \"Phòng ban 2\" and note \"phòng ban 2 note\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Phòng ban 2\"",
+                  "offset": 27
+                },
+                {
+                  "val": "\"phòng ban 2 note\"",
+                  "offset": 50
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.user_enter_department_name_and_note(java.lang.String,java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 307247900,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 152170100,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "User click on save button in department form",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.user_click_on_save_button_in_department_form()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 306498300,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 201569200,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "Display alert message \"Lưu thành công\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Lưu thành công\"",
+                  "offset": 22
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.display_alert_message(java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 300459700,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 166799000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "User click on confirm button",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.user_click_on_confirm_button()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 313342400,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5137243700,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "Close alert message",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.close_alert_message()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 304993700,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1673085300,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "User should found department with \"Phòng ban 2\" and \"phòng ban 2 note\" in the list",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Phòng ban 2\"",
+                  "offset": 34
+                },
+                {
+                  "val": "\"phòng ban 2 note\"",
+                  "offset": 52
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.user_should_found_department_with_and_in_the_list(java.lang.String,java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 304019700,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1063110600,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "close browser",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.close_browser()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 310689000,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@UAT_Testing"
+          },
+          {
+            "name": "@create"
+          },
+          {
+            "name": "@update"
+          },
+          {
+            "name": "@delete"
+          },
+          {
+            "name": "@revert"
+          },
+          {
+            "name": "@search"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 4266215800,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User is on \"Phòng ban\" page with account \"administrator\" and password \"123456@#\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Phòng ban\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"administrator\"",
+                  "offset": 41
+                },
+                {
+                  "val": "\"123456@#\"",
+                  "offset": 70
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.user_is_on_page_with_account_and_password(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 315857500,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-08-25T11:18:10.531Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1698234600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitions.Hooks.setup()"
+            }
+          }
+        ],
+        "line": 24,
+        "name": "Create department successful with valid value",
+        "description": "",
+        "id": "department;create-department-successful-with-valid-value;;4",
+        "after": [
+          {
+            "result": {
+              "duration": 544300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitions.Hooks.AfterTest(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 167004100,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "User click on create department button",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.user_click_on_create_department_button()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 300995800,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 77000900,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "Open department form",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.open_department_form()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 312989900,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 582024800,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "User enter department name \"Phòng ban 3\" and note \"phòng ban 3 note\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Phòng ban 3\"",
+                  "offset": 27
+                },
+                {
+                  "val": "\"phòng ban 3 note\"",
+                  "offset": 50
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.user_enter_department_name_and_note(java.lang.String,java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 307901400,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 134955500,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "User click on save button in department form",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.user_click_on_save_button_in_department_form()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 302612800,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 110968900,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "Display alert message \"Lưu thành công\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Lưu thành công\"",
+                  "offset": 22
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.display_alert_message(java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 309811500,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 123000200,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "User click on confirm button",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.user_click_on_confirm_button()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 300385000,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5158409700,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "Close alert message",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.close_alert_message()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 306033400,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1694898200,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "User should found department with \"Phòng ban 3\" and \"phòng ban 3 note\" in the list",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Phòng ban 3\"",
+                  "offset": 34
+                },
+                {
+                  "val": "\"phòng ban 3 note\"",
+                  "offset": 52
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.user_should_found_department_with_and_in_the_list(java.lang.String,java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 300030900,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1065147800,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "close browser",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.close_browser()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 308914400,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@UAT_Testing"
+          },
+          {
+            "name": "@create"
+          },
+          {
+            "name": "@update"
+          },
+          {
+            "name": "@delete"
+          },
+          {
+            "name": "@revert"
+          },
+          {
+            "name": "@search"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 4514400600,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User is on \"Phòng ban\" page with account \"administrator\" and password \"123456@#\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Phòng ban\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"administrator\"",
+                  "offset": 41
+                },
+                {
+                  "val": "\"123456@#\"",
+                  "offset": 70
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.user_is_on_page_with_account_and_password(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 303007100,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-08-25T11:18:28.701Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1687024400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitions.Hooks.setup()"
+            }
+          }
+        ],
+        "line": 27,
+        "name": "Create department with name is blank",
+        "description": "",
+        "id": "department;create-department-with-name-is-blank",
         "after": [
           {
             "result": {
@@ -284,14 +1075,18 @@
         "steps": [
           {
             "result": {
-              "status": "undefined"
+              "duration": 467994700,
+              "status": "passed"
             },
-            "line": 9,
-            "name": "User search a SO with customer and status",
-            "match": {},
+            "line": 28,
+            "name": "User click on create department button",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.user_click_on_create_department_button()"
+            },
             "after": [
               {
                 "result": {
+                  "duration": 313023100,
                   "status": "passed"
                 },
                 "match": {
@@ -299,29 +1094,23 @@
                 }
               }
             ],
-            "rows": [
-              {
-                "cells": [
-                  "DAE WON CHONG UP CORPORATION",
-                  "Đã duyệt"
-                ]
-              }
-            ],
             "keyword": "When "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 45356300,
+              "status": "passed"
             },
-            "line": 11,
-            "name": "SO should appear in the SO list",
+            "line": 29,
+            "name": "Open department form",
             "match": {
-              "location": "StepDefinitions.business_sale_order.search_SO_StepDefs.so_should_appear_in_the_so_list()"
+              "location": "StepDefinitions.system.department_stepdefs.open_department_form()"
             },
             "after": [
               {
                 "result": {
-                  "status": "skipped"
+                  "duration": 314185800,
+                  "status": "passed"
                 },
                 "match": {
                   "location": "StepDefinitions.Hooks.DelayAfterStep()"
@@ -332,17 +1121,100 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 412075200,
+              "status": "passed"
             },
-            "line": 12,
-            "name": "close browser",
+            "line": 30,
+            "name": "User enter note \"phòng ban note\"",
             "match": {
-              "location": "StepDefinitions.Auth.LoginStepDefs.close_browser()"
+              "arguments": [
+                {
+                  "val": "\"phòng ban note\"",
+                  "offset": 16
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.user_enter_note(java.lang.String)"
             },
             "after": [
               {
                 "result": {
-                  "status": "skipped"
+                  "duration": 309742100,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 119653900,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "User click on save button in department form",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.user_click_on_save_button_in_department_form()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 304645300,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 96539000,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "Display alert message \"Bắt buộc\" for required values in department form",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Bắt buộc\"",
+                  "offset": 22
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.display_alert_message_for_required_values_in_department_form(java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 313347200,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 956854200,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "close browser",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.close_browser()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 311044200,
+                  "status": "passed"
                 },
                 "match": {
                   "location": "StepDefinitions.Hooks.DelayAfterStep()"
@@ -354,16 +1226,3571 @@
         ],
         "tags": [
           {
-            "name": "@Integration"
+            "name": "@UAT_Testing"
+          },
+          {
+            "name": "@create"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 4328059000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User is on \"Phòng ban\" page with account \"administrator\" and password \"123456@#\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Phòng ban\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"administrator\"",
+                  "offset": 41
+                },
+                {
+                  "val": "\"123456@#\"",
+                  "offset": 70
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.user_is_on_page_with_account_and_password(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 303002500,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-08-25T11:18:39.189Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2060611400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitions.Hooks.setup()"
+            }
+          }
+        ],
+        "line": 45,
+        "name": "Create department with name already exist",
+        "description": "",
+        "id": "department;create-department-with-name-already-exist;;2",
+        "after": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitions.Hooks.AfterTest(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 461995800,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "User click on create department button",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.user_click_on_create_department_button()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 312107000,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 50592200,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "Open department form",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.open_department_form()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 308127600,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 515916700,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "User enter department name \"Phòng ban 1\" and note \"phòng ban 1 note\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Phòng ban 1\"",
+                  "offset": 27
+                },
+                {
+                  "val": "\"phòng ban 1 note\"",
+                  "offset": 50
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.user_enter_department_name_and_note(java.lang.String,java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 315107900,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 122001100,
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "User click on save button in department form",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.user_click_on_save_button_in_department_form()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 301704500,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 45490300,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "Display alert message \"Đã tồn tại\" for required values in department form",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Đã tồn tại\"",
+                  "offset": 22
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.display_alert_message_for_required_values_in_department_form(java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 310428500,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1051841300,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "close browser",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.close_browser()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 311524800,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@UAT_Testing"
+          },
+          {
+            "name": "@create"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 4312894900,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User is on \"Phòng ban\" page with account \"administrator\" and password \"123456@#\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Phòng ban\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"administrator\"",
+                  "offset": 41
+                },
+                {
+                  "val": "\"123456@#\"",
+                  "offset": 70
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.user_is_on_page_with_account_and_password(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 307996100,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-08-25T11:18:50.021Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1825085400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitions.Hooks.setup()"
+            }
+          }
+        ],
+        "line": 58,
+        "name": "Create failed when canceling create operation",
+        "description": "",
+        "id": "department;create-failed-when-canceling-create-operation;;2",
+        "after": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitions.Hooks.AfterTest(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 514293900,
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "User click on create department button",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.user_click_on_create_department_button()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 307018800,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 43982300,
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "Open department form",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.open_department_form()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 300715400,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 569042000,
+              "status": "passed"
+            },
+            "line": 51,
+            "name": "User enter department name \"Phòng ban 4\" and note \"phòng ban 4 note\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Phòng ban 4\"",
+                  "offset": 27
+                },
+                {
+                  "val": "\"phòng ban 4 note\"",
+                  "offset": 50
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.user_enter_department_name_and_note(java.lang.String,java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 308548700,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 192847000,
+              "status": "passed"
+            },
+            "line": 52,
+            "name": "User click on close button in department form",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.user_click_on_close_button_in_department_form()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 309584600,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5075642500,
+              "status": "passed"
+            },
+            "line": 53,
+            "name": "Close department form",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.close_department_form()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 308642300,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2487345100,
+              "status": "passed"
+            },
+            "line": 54,
+            "name": "User should not found department with \"Phòng ban 4\" and \"phòng ban 4 note\" in the list",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Phòng ban 4\"",
+                  "offset": 38
+                },
+                {
+                  "val": "\"phòng ban 4 note\"",
+                  "offset": 56
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.user_should_not_found_department_with_and_in_the_list(java.lang.String,java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 302326300,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1048712000,
+              "status": "passed"
+            },
+            "line": 55,
+            "name": "close browser",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.close_browser()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 312171700,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@UAT_Testing"
+          },
+          {
+            "name": "@create"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 4452029700,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User is on \"Phòng ban\" page with account \"administrator\" and password \"123456@#\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Phòng ban\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"administrator\"",
+                  "offset": 41
+                },
+                {
+                  "val": "\"123456@#\"",
+                  "offset": 70
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.user_is_on_page_with_account_and_password(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 313001100,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-08-25T11:19:08.571Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1630498500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitions.Hooks.setup()"
+            }
+          }
+        ],
+        "line": 74,
+        "name": "Read department",
+        "description": "",
+        "id": "department;read-department;;2",
+        "after": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitions.Hooks.AfterTest(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1032712300,
+              "status": "passed"
+            },
+            "line": 64,
+            "name": "User choose department \"Phòng ban 1\" and choose view",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Phòng ban 1\"",
+                  "offset": 23
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.user_choose_department_and_choose_view(java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 308403800,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 43967800,
+              "status": "passed"
+            },
+            "line": 65,
+            "name": "Open department form",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.open_department_form()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 314877900,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 44543500,
+              "status": "passed"
+            },
+            "line": 66,
+            "name": "Department form fields are read-only",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.department_form_fields_are_read_only()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 302018100,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 70438700,
+              "status": "passed"
+            },
+            "line": 67,
+            "name": "Department form fields \"Phòng ban 1\" and \"phòng ban 1 note\" are loaded by default",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Phòng ban 1\"",
+                  "offset": 23
+                },
+                {
+                  "val": "\"phòng ban 1 note\"",
+                  "offset": 41
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.department_form_fields_and_are_loaded_by_default(java.lang.String,java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 303216900,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 140684100,
+              "status": "passed"
+            },
+            "line": 68,
+            "name": "User click on close button in department form",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.user_click_on_close_button_in_department_form()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 313216900,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5032453400,
+              "status": "passed"
+            },
+            "line": 69,
+            "name": "Close department form",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.close_department_form()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 307905000,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1004190400,
+              "status": "passed"
+            },
+            "line": 70,
+            "name": "close browser",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.close_browser()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 309202700,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@UAT_Testing"
+          },
+          {
+            "name": "@read"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 4516185700,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User is on \"Phòng ban\" page with account \"administrator\" and password \"123456@#\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Phòng ban\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"administrator\"",
+                  "offset": 41
+                },
+                {
+                  "val": "\"123456@#\"",
+                  "offset": 70
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.user_is_on_page_with_account_and_password(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 301997800,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-08-25T11:19:24.511Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1624349800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitions.Hooks.setup()"
+            }
+          }
+        ],
+        "line": 89,
+        "name": "Delete department",
+        "description": "",
+        "id": "department;delete-department;;2",
+        "after": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitions.Hooks.AfterTest(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 930202500,
+              "status": "passed"
+            },
+            "line": 79,
+            "name": "When user choose department \"Phòng ban 1\" and choose delete",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Phòng ban 1\"",
+                  "offset": 28
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.when_user_choose_department_and_choose_delete(java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 311789300,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 64125800,
+              "status": "passed"
+            },
+            "line": 80,
+            "name": "Display alert message as \"Bạn có chắc không\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Bạn có chắc không\"",
+                  "offset": 25
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.display_alert_message_as(java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 310589100,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 124996700,
+              "status": "passed"
+            },
+            "line": 81,
+            "name": "User click on yes button",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.user_click_on_yes_button()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 300448100,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 37560500,
+              "status": "passed"
+            },
+            "line": 82,
+            "name": "Display alert message as \"Xóa thành công\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Xóa thành công\"",
+                  "offset": 25
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.display_alert_message_as(java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 302811800,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 157074100,
+              "status": "passed"
+            },
+            "line": 83,
+            "name": "User click on confirm button",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.user_click_on_confirm_button()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 316169400,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5176686400,
+              "status": "passed"
+            },
+            "line": 84,
+            "name": "Close alert message",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.close_alert_message()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 307324900,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 6425027600,
+              "status": "passed"
+            },
+            "line": 85,
+            "name": "User should not found department with \"Phòng ban 1\" and \"phòng ban 1 note\" in the list",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Phòng ban 1\"",
+                  "offset": 38
+                },
+                {
+                  "val": "\"phòng ban 1 note\"",
+                  "offset": 56
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.user_should_not_found_department_with_and_in_the_list(java.lang.String,java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 311136500,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1049056600,
+              "status": "passed"
+            },
+            "line": 86,
+            "name": "close browser",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.close_browser()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 308513600,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@UAT_Testing"
+          },
+          {
+            "name": "@delete"
+          },
+          {
+            "name": "@revert"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 4528049600,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User is on \"Phòng ban\" page with account \"administrator\" and password \"123456@#\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Phòng ban\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"administrator\"",
+                  "offset": 41
+                },
+                {
+                  "val": "\"123456@#\"",
+                  "offset": 70
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.user_is_on_page_with_account_and_password(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 313004100,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-08-25T11:19:47.416Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1568126600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitions.Hooks.setup()"
+            }
+          }
+        ],
+        "line": 101,
+        "name": "Delete failed when canceling create operation",
+        "description": "",
+        "id": "department;delete-failed-when-canceling-create-operation;;2",
+        "after": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitions.Hooks.AfterTest(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1040577800,
+              "status": "passed"
+            },
+            "line": 93,
+            "name": "When user choose department \"Phòng ban 2\" and choose delete",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Phòng ban 2\"",
+                  "offset": 28
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.when_user_choose_department_and_choose_delete(java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 302438300,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 59774400,
+              "status": "passed"
+            },
+            "line": 94,
+            "name": "Display alert message as \"Bạn có chắc không\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Bạn có chắc không\"",
+                  "offset": 25
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.display_alert_message_as(java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 303174600,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 118002500,
+              "status": "passed"
+            },
+            "line": 95,
+            "name": "User click on no button",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.user_click_on_no_button()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 303845100,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5154094900,
+              "status": "passed"
+            },
+            "line": 96,
+            "name": "Close alert message",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.close_alert_message()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 306416000,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1511613500,
+              "status": "passed"
+            },
+            "line": 97,
+            "name": "User should found department with \"Phòng ban 2\" and \"phòng ban 2 note\" in the list",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Phòng ban 2\"",
+                  "offset": 34
+                },
+                {
+                  "val": "\"phòng ban 2 note\"",
+                  "offset": 52
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.user_should_found_department_with_and_in_the_list(java.lang.String,java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 305663400,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1022088600,
+              "status": "passed"
+            },
+            "line": 98,
+            "name": "close browser",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.close_browser()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 311192500,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@UAT_Testing"
+          },
+          {
+            "name": "@delete"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 4266635900,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User is on \"Phòng ban\" page with account \"administrator\" and password \"123456@#\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Phòng ban\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"administrator\"",
+                  "offset": 41
+                },
+                {
+                  "val": "\"123456@#\"",
+                  "offset": 70
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.user_is_on_page_with_account_and_password(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 305997100,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-08-25T11:20:04.597Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1578426300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitions.Hooks.setup()"
+            }
+          }
+        ],
+        "line": 112,
+        "name": "Revert department",
+        "description": "",
+        "id": "department;revert-department;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 1025584100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitions.Hooks.AfterTest(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 868446100,
+              "status": "passed"
+            },
+            "line": 106,
+            "name": "User has an unused department",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.user_has_an_unused_department()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 303838700,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 630007300,
+              "status": "passed"
+            },
+            "line": 107,
+            "name": "User choose department \"Phòng ban 1\" and choose revert",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Phòng ban 1\"",
+                  "offset": 23
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.user_choose_department_and_choose_revert(java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 306091500,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 396286100,
+              "status": "passed"
+            },
+            "line": 108,
+            "name": "User choose use status as \"Sử dụng\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Sử dụng\"",
+                  "offset": 26
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.user_choose_use_status_as(java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 311851300,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1511755200,
+              "status": "passed"
+            },
+            "line": 109,
+            "name": "User should found department with \"Phòng ban 1\" and \"phòng ban 1 note\" in the list",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Phòng ban 1\"",
+                  "offset": 34
+                },
+                {
+                  "val": "\"phòng ban 1 note\"",
+                  "offset": 52
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.user_should_found_department_with_and_in_the_list(java.lang.String,java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 303160600,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@UAT_Testing"
+          },
+          {
+            "name": "@revert"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 4318138000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User is on \"Phòng ban\" page with account \"administrator\" and password \"123456@#\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Phòng ban\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"administrator\"",
+                  "offset": 41
+                },
+                {
+                  "val": "\"123456@#\"",
+                  "offset": 70
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.user_is_on_page_with_account_and_password(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 304999300,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-08-25T11:20:16.421Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1684519500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitions.Hooks.setup()"
+            }
+          }
+        ],
+        "line": 122,
+        "name": "Department not appear in the department list when searching with invalid value",
+        "description": "",
+        "id": "department;department-not-appear-in-the-department-list-when-searching-with-invalid-value;;2",
+        "after": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitions.Hooks.AfterTest(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1081806400,
+              "status": "passed"
+            },
+            "line": 117,
+            "name": "User search a department with \"inValid\" and \"Sử dụng\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"inValid\"",
+                  "offset": 30
+                },
+                {
+                  "val": "\"Sử dụng\"",
+                  "offset": 44
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.user_search_a_department_with_and(java.lang.String,java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 312392100,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 6437062800,
+              "status": "passed"
+            },
+            "line": 118,
+            "name": "User should not found department with \"inValid\" and \"invalid note\" in the list",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"inValid\"",
+                  "offset": 38
+                },
+                {
+                  "val": "\"invalid note\"",
+                  "offset": 52
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.user_should_not_found_department_with_and_in_the_list(java.lang.String,java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 306570400,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 990728900,
+              "status": "passed"
+            },
+            "line": 119,
+            "name": "close browser",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.close_browser()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 307045200,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@UAT_Testing"
+          },
+          {
+            "name": "@search"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 4232089000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User is on \"Phòng ban\" page with account \"administrator\" and password \"123456@#\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Phòng ban\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"administrator\"",
+                  "offset": 41
+                },
+                {
+                  "val": "\"123456@#\"",
+                  "offset": 70
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.user_is_on_page_with_account_and_password(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 313003400,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-08-25T11:20:32.200Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1638704900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitions.Hooks.setup()"
+            }
+          }
+        ],
+        "line": 132,
+        "name": "Department should appear in the department list when searching with valid value",
+        "description": "",
+        "id": "department;department-should-appear-in-the-department-list-when-searching-with-valid-value;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 922100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitions.Hooks.AfterTest(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1201019600,
+              "status": "passed"
+            },
+            "line": 126,
+            "name": "User search a department with \"Phòng ban 1\" and \"Sử dụng\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Phòng ban 1\"",
+                  "offset": 30
+                },
+                {
+                  "val": "\"Sử dụng\"",
+                  "offset": 48
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.user_search_a_department_with_and(java.lang.String,java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 314835600,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1516663100,
+              "status": "passed"
+            },
+            "line": 127,
+            "name": "User should found department with \"Phòng ban 1\" and \"phòng ban 1 note\" in the list",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Phòng ban 1\"",
+                  "offset": 34
+                },
+                {
+                  "val": "\"phòng ban 1 note\"",
+                  "offset": 52
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.user_should_found_department_with_and_in_the_list(java.lang.String,java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 313911200,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 981954000,
+              "status": "passed"
+            },
+            "line": 128,
+            "name": "close browser",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.close_browser()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 310830800,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@UAT_Testing"
+          },
+          {
+            "name": "@search"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 4192366900,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User is on \"Phòng ban\" page with account \"administrator\" and password \"123456@#\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Phòng ban\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"administrator\"",
+                  "offset": 41
+                },
+                {
+                  "val": "\"123456@#\"",
+                  "offset": 70
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.user_is_on_page_with_account_and_password(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 302996700,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-08-25T11:20:43.049Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1607974600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitions.Hooks.setup()"
+            }
+          }
+        ],
+        "line": 133,
+        "name": "Department should appear in the department list when searching with valid value",
+        "description": "",
+        "id": "department;department-should-appear-in-the-department-list-when-searching-with-valid-value;;3",
+        "after": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitions.Hooks.AfterTest(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1234235000,
+              "status": "passed"
+            },
+            "line": 126,
+            "name": "User search a department with \"Phòng ban 2\" and \"Sử dụng\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Phòng ban 2\"",
+                  "offset": 30
+                },
+                {
+                  "val": "\"Sử dụng\"",
+                  "offset": 48
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.user_search_a_department_with_and(java.lang.String,java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 302097200,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1627650000,
+              "status": "passed"
+            },
+            "line": 127,
+            "name": "User should found department with \"Phòng ban 2\" and \"phòng ban 2 note\" in the list",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Phòng ban 2\"",
+                  "offset": 34
+                },
+                {
+                  "val": "\"phòng ban 2 note\"",
+                  "offset": 52
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.user_should_found_department_with_and_in_the_list(java.lang.String,java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 304886000,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1028741200,
+              "status": "passed"
+            },
+            "line": 128,
+            "name": "close browser",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.close_browser()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 314123900,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@UAT_Testing"
+          },
+          {
+            "name": "@search"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 4253503900,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User is on \"Phòng ban\" page with account \"administrator\" and password \"123456@#\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Phòng ban\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"administrator\"",
+                  "offset": 41
+                },
+                {
+                  "val": "\"123456@#\"",
+                  "offset": 70
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.user_is_on_page_with_account_and_password(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 306995600,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-08-25T11:20:53.979Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1564406400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitions.Hooks.setup()"
+            }
+          }
+        ],
+        "line": 150,
+        "name": "Update department successful with valid value",
+        "description": "",
+        "id": "department;update-department-successful-with-valid-value;;2",
+        "after": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitions.Hooks.AfterTest(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1123005200,
+              "status": "passed"
+            },
+            "line": 138,
+            "name": "User choose department \"Phòng ban 1\" and choose update",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Phòng ban 1\"",
+                  "offset": 23
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.user_choose_department_and_choose_update(java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 306813200,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 69047800,
+              "status": "passed"
+            },
+            "line": 139,
+            "name": "Open department form",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.open_department_form()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 309469800,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 107846700,
+              "status": "passed"
+            },
+            "line": 140,
+            "name": "Department form fields \"Phòng ban 1\" and \"phòng ban 1 note\" are loaded by default",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Phòng ban 1\"",
+                  "offset": 23
+                },
+                {
+                  "val": "\"phòng ban 1 note\"",
+                  "offset": 41
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.department_form_fields_and_are_loaded_by_default(java.lang.String,java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 311644600,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 587389700,
+              "status": "passed"
+            },
+            "line": 141,
+            "name": "User enter department name \"Phòng ban 1 - updated\" and note \"phòng ban 1 note - updated\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Phòng ban 1 - updated\"",
+                  "offset": 27
+                },
+                {
+                  "val": "\"phòng ban 1 note - updated\"",
+                  "offset": 60
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.user_enter_department_name_and_note(java.lang.String,java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 308474800,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 119112800,
+              "status": "passed"
+            },
+            "line": 142,
+            "name": "User click on save button in department form",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.user_click_on_save_button_in_department_form()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 306205700,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 47546100,
+              "status": "passed"
+            },
+            "line": 143,
+            "name": "Display alert message \"Lưu thành công\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Lưu thành công\"",
+                  "offset": 22
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.display_alert_message(java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 308611100,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 139004800,
+              "status": "passed"
+            },
+            "line": 144,
+            "name": "User click on confirm button",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.user_click_on_confirm_button()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 302597400,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5155720500,
+              "status": "passed"
+            },
+            "line": 145,
+            "name": "Close alert message",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.close_alert_message()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 308274200,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1462965600,
+              "status": "passed"
+            },
+            "line": 146,
+            "name": "User should found department with \"Phòng ban 1 - updated\" and \"phòng ban 1 note - updated\" in the list",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Phòng ban 1 - updated\"",
+                  "offset": 34
+                },
+                {
+                  "val": "\"phòng ban 1 note - updated\"",
+                  "offset": 62
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.user_should_found_department_with_and_in_the_list(java.lang.String,java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 305038900,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 994013500,
+              "status": "passed"
+            },
+            "line": 147,
+            "name": "close browser",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.close_browser()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 309430200,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@UAT_Testing"
+          },
+          {
+            "name": "@update"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 4138186400,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User is on \"Phòng ban\" page with account \"administrator\" and password \"123456@#\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Phòng ban\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"administrator\"",
+                  "offset": 41
+                },
+                {
+                  "val": "\"123456@#\"",
+                  "offset": 70
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.user_is_on_page_with_account_and_password(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 306996800,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-08-25T11:21:13.009Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1610431600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitions.Hooks.setup()"
+            }
+          }
+        ],
+        "line": 164,
+        "name": "Update department with name is blank",
+        "description": "",
+        "id": "department;update-department-with-name-is-blank;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 987217300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitions.Hooks.AfterTest(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 912856100,
+              "status": "passed"
+            },
+            "line": 154,
+            "name": "User choose department \"Phòng ban 2\" and choose update",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Phòng ban 2\"",
+                  "offset": 23
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.user_choose_department_and_choose_update(java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 310954400,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 47003700,
+              "status": "passed"
+            },
+            "line": 155,
+            "name": "Open department form",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.open_department_form()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 310422900,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 119166700,
+              "status": "passed"
+            },
+            "line": 156,
+            "name": "Department form fields \"Phòng ban 2\" and \"phòng ban 2 note\" are loaded by default",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Phòng ban 2\"",
+                  "offset": 23
+                },
+                {
+                  "val": "\"phòng ban 2 note\"",
+                  "offset": 41
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.department_form_fields_and_are_loaded_by_default(java.lang.String,java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 300378800,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 264585300,
+              "status": "passed"
+            },
+            "line": 157,
+            "name": "User clear department name",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.user_clear_department_name()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 313066300,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 391957100,
+              "status": "passed"
+            },
+            "line": 158,
+            "name": "User enter note \"phòng ban 2 note - updated\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"phòng ban 2 note - updated\"",
+                  "offset": 16
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.user_enter_note(java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 300021800,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 136963400,
+              "status": "passed"
+            },
+            "line": 159,
+            "name": "User click on save button in department form",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.user_click_on_save_button_in_department_form()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 303816900,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 45968900,
+              "status": "passed"
+            },
+            "line": 160,
+            "name": "Display alert message \"Bắt buộc\" for required values in department form",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Bắt buộc\"",
+                  "offset": 22
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.display_alert_message_for_required_values_in_department_form(java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 315097300,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@UAT_Testing"
+          },
+          {
+            "name": "@update"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 4188760300,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User is on \"Phòng ban\" page with account \"administrator\" and password \"123456@#\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Phòng ban\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"administrator\"",
+                  "offset": 41
+                },
+                {
+                  "val": "\"123456@#\"",
+                  "offset": 70
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.user_is_on_page_with_account_and_password(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 304999400,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-08-25T11:21:24.144Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1537554200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitions.Hooks.setup()"
+            }
+          }
+        ],
+        "line": 176,
+        "name": "Update department with name already exist",
+        "description": "",
+        "id": "department;update-department-with-name-already-exist;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 1051635300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitions.Hooks.AfterTest(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 991001000,
+              "status": "passed"
+            },
+            "line": 168,
+            "name": "User choose department \"Phòng ban 3\" and choose update",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Phòng ban 3\"",
+                  "offset": 23
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.user_choose_department_and_choose_update(java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 315633600,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 49100600,
+              "status": "passed"
+            },
+            "line": 169,
+            "name": "Open department form",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.open_department_form()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 308822300,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 100650900,
+              "status": "passed"
+            },
+            "line": 170,
+            "name": "Department form fields \"Phòng ban 3\" and \"phòng ban 3 note\" are loaded by default",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Phòng ban 3\"",
+                  "offset": 23
+                },
+                {
+                  "val": "\"phòng ban 3 note\"",
+                  "offset": 41
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.department_form_fields_and_are_loaded_by_default(java.lang.String,java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 302535300,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 629086500,
+              "status": "passed"
+            },
+            "line": 171,
+            "name": "User enter department name \"Phòng ban 2\" and note \"phòng ban 2 note - updated\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Phòng ban 2\"",
+                  "offset": 27
+                },
+                {
+                  "val": "\"phòng ban 2 note - updated\"",
+                  "offset": 50
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.user_enter_department_name_and_note(java.lang.String,java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 313375500,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 156982600,
+              "status": "passed"
+            },
+            "line": 172,
+            "name": "User click on save button in department form",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.user_click_on_save_button_in_department_form()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 312825600,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 108935800,
+              "status": "passed"
+            },
+            "line": 173,
+            "name": "Display alert message \"Đã tồn tại\" for required values in department form",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Đã tồn tại\"",
+                  "offset": 22
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.display_alert_message_for_required_values_in_department_form(java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 315035000,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@UAT_Testing"
+          },
+          {
+            "name": "@update"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 4294374100,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User is on \"Phòng ban\" page with account \"administrator\" and password \"123456@#\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Phòng ban\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"administrator\"",
+                  "offset": 41
+                },
+                {
+                  "val": "\"123456@#\"",
+                  "offset": 70
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.user_is_on_page_with_account_and_password(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 311002100,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-08-25T11:21:35.150Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1692288500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitions.Hooks.setup()"
+            }
+          }
+        ],
+        "line": 191,
+        "name": "Update when no change value",
+        "description": "",
+        "id": "department;update-when-no-change-value;;2",
+        "after": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitions.Hooks.AfterTest(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1601364100,
+              "status": "passed"
+            },
+            "line": 180,
+            "name": "User choose department \"Phòng ban 3\" and choose update",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Phòng ban 3\"",
+                  "offset": 23
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.user_choose_department_and_choose_update(java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 304542400,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 52025300,
+              "status": "passed"
+            },
+            "line": 181,
+            "name": "Open department form",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.open_department_form()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 307184000,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 100885700,
+              "status": "passed"
+            },
+            "line": 182,
+            "name": "Department form fields \"Phòng ban 3\" and \"phòng ban 3 note\" are loaded by default",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Phòng ban 3\"",
+                  "offset": 23
+                },
+                {
+                  "val": "\"phòng ban 3 note\"",
+                  "offset": 41
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.department_form_fields_and_are_loaded_by_default(java.lang.String,java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 300980900,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 163932300,
+              "status": "passed"
+            },
+            "line": 183,
+            "name": "User click on save button in department form",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.user_click_on_save_button_in_department_form()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 306243300,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 52542500,
+              "status": "passed"
+            },
+            "line": 184,
+            "name": "Display alert message \"Lưu thành công\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Lưu thành công\"",
+                  "offset": 22
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.display_alert_message(java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 303750900,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 121345300,
+              "status": "passed"
+            },
+            "line": 185,
+            "name": "User click on confirm button",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.user_click_on_confirm_button()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 303397500,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5154168400,
+              "status": "passed"
+            },
+            "line": 186,
+            "name": "Close alert message",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.close_alert_message()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 306031100,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1476450900,
+              "status": "passed"
+            },
+            "line": 187,
+            "name": "User should found department with \"Phòng ban 3\" and \"phòng ban 3 note\" in the list",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Phòng ban 3\"",
+                  "offset": 34
+                },
+                {
+                  "val": "\"phòng ban 3 note\"",
+                  "offset": 52
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.user_should_found_department_with_and_in_the_list(java.lang.String,java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 303996400,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1040789000,
+              "status": "passed"
+            },
+            "line": 188,
+            "name": "close browser",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.close_browser()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 306570100,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@UAT_Testing"
+          },
+          {
+            "name": "@update"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 4398523000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User is on \"Phòng ban\" page with account \"administrator\" and password \"123456@#\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Phòng ban\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"administrator\"",
+                  "offset": 41
+                },
+                {
+                  "val": "\"123456@#\"",
+                  "offset": 70
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.user_is_on_page_with_account_and_password(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 307343800,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-08-25T11:21:53.963Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1608304400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitions.Hooks.setup()"
+            }
+          }
+        ],
+        "line": 204,
+        "name": "Update failed when canceling create operation",
+        "description": "",
+        "id": "department;update-failed-when-canceling-create-operation;;2",
+        "after": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitions.Hooks.AfterTest(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1031993300,
+              "status": "passed"
+            },
+            "line": 195,
+            "name": "User choose department \"Phòng ban 3\" and choose update",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Phòng ban 3\"",
+                  "offset": 23
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.user_choose_department_and_choose_update(java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 302989200,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 39998800,
+              "status": "passed"
+            },
+            "line": 196,
+            "name": "Open department form",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.open_department_form()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 300793700,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 118821700,
+              "status": "passed"
+            },
+            "line": 197,
+            "name": "Department form fields \"Phòng ban 3\" and \"phòng ban 3 note\" are loaded by default",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Phòng ban 3\"",
+                  "offset": 23
+                },
+                {
+                  "val": "\"phòng ban 3 note\"",
+                  "offset": 41
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.department_form_fields_and_are_loaded_by_default(java.lang.String,java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 305256200,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 566748600,
+              "status": "passed"
+            },
+            "line": 198,
+            "name": "User enter department name \"Phòng ban 3 - updated\" and note \"phòng ban 3 note - updated\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Phòng ban 3 - updated\"",
+                  "offset": 27
+                },
+                {
+                  "val": "\"phòng ban 3 note - updated\"",
+                  "offset": 60
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.user_enter_department_name_and_note(java.lang.String,java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 309352500,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 120794100,
+              "status": "passed"
+            },
+            "line": 199,
+            "name": "User click on close button in department form",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.user_click_on_close_button_in_department_form()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 301615900,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1534193000,
+              "status": "passed"
+            },
+            "line": 200,
+            "name": "User should not found department with \"Phòng ban 3 - updated\" and \"phòng ban 3 note - updated\" in the list",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Phòng ban 3 - updated\"",
+                  "offset": 38
+                },
+                {
+                  "val": "\"phòng ban 3 note - updated\"",
+                  "offset": 66
+                }
+              ],
+              "location": "StepDefinitions.system.department_stepdefs.user_should_not_found_department_with_and_in_the_list(java.lang.String,java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 302644000,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 965731000,
+              "status": "passed"
+            },
+            "line": 201,
+            "name": "close browser",
+            "match": {
+              "location": "StepDefinitions.system.department_stepdefs.close_browser()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 311096300,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.Hooks.DelayAfterStep()"
+                }
+              }
+            ],
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@UAT_Testing"
+          },
+          {
+            "name": "@update"
           }
         ]
       }
     ],
-    "name": "Search Business Sale Order",
+    "name": "Department",
     "description": "",
-    "id": "search-business-sale-order",
+    "id": "department",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/business_sale_order/search_SO.feature",
-    "tags": []
+    "uri": "file:src/test/resources/features/system/department.feature",
+    "tags": [
+      {
+        "name": "@UAT_Testing",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
   }
 ]

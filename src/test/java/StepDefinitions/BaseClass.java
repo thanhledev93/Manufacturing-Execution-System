@@ -14,10 +14,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Parameters;
 import pageObjects.Auth.LoginPage;
 import pageObjects.BaseObjectPage;
-import pageObjects.MaintenancePlanningSystem.MP_DetailCalendarFormPage;
-import pageObjects.MaintenancePlanningSystem.MP_MainTablePage;
-import pageObjects.MaintenancePlanningSystem.MP_MaintenancePlanningFormPage;
-import pageObjects.MaintenancePlanningSystem.MP_SearchFormPage;
+import pageObjects.sys.department.Department_CreateFormPage;
+import pageObjects.sys.department.Department_MainTablePage;
+import pageObjects.sys.department.Department_SearchFormPage;
 import runner.WebDriverFactory;
 
 import java.io.File;
@@ -28,17 +27,16 @@ import java.util.concurrent.TimeUnit;
 
 public class BaseClass extends WebDriverFactory {
     public static final String baseUrl = "https://quanlysanxuat.online/sign-in";
-
-    public LoginPage loginPage;
-
-    // Maintenance Planning
-    public MP_DetailCalendarFormPage mpDetailCalendar;
-    public MP_MainTablePage mpMainTable;
-    public MP_MaintenancePlanningFormPage mpMaintenancePlanning;
-    public MP_SearchFormPage mpSearch;
-
     public BaseObjectPage baseObjectPage;
 
+
+    // Loging
+    public LoginPage loginPage;
+
+    // Department
+    public Department_MainTablePage dept_mainTable;
+    public Department_SearchFormPage dept_Search;
+    public Department_CreateFormPage dept_createForm;
 
 
     //Create for generating random string for Unique email
@@ -50,7 +48,6 @@ public class BaseClass extends WebDriverFactory {
         WebDriverWait webDriverWait = new WebDriverWait(getDriver(), 10);
         webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(by)));
     }
-
 
 
     public void sendKeys(WebDriver driver1, WebElement element, String value) {

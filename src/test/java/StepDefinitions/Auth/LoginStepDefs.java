@@ -51,7 +51,7 @@ public class LoginStepDefs extends BaseClass {
         Assert.assertEquals(title, ele.getText());
     }
 
-    @And("close browser")
+    @And("close browser.")
     public void close_browser() {
         getDriver().quit();
     }

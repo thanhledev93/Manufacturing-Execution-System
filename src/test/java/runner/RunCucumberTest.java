@@ -12,21 +12,21 @@ import java.io.IOException;
 @CucumberOptions(
         features = {"src/test/resources/features"},
         plugin = {"json:target/cucumber.json"},
-        dryRun = true,
+        dryRun = false,
         monochrome = true,
         glue = {"StepDefinitions"},
-        tags = "@Integration"
+        tags = "@UAT_Testing"
 )
 public class RunCucumberTest extends AbstractTestNGCucumberTests{
     @BeforeSuite
     public static void setup() throws IOException, InterruptedException {
-        Runtime.getRuntime().exec("cmd /c start " +System.getProperty("user.dir") + File.separator + ".github" + File.separator + "workflows" + File.separator + "start_dockergrid");
-        Thread.sleep(30000);
+//        Runtime.getRuntime().exec("cmd /c start " +System.getProperty("user.dir") + File.separator + ".github" + File.separator + "workflows" + File.separator + "start_dockergrid");
+//        Thread.sleep(30000);
     }
 
     @AfterSuite
     public static void tearDown() throws IOException, InterruptedException {
-        Runtime.getRuntime().exec("cmd /c start " +System.getProperty("user.dir") + File.separator + ".github" + File.separator + "workflows" + File.separator + "stop_dockergrid");
-        Thread.sleep(20000);
+//        Runtime.getRuntime().exec("cmd /c start " +System.getProperty("user.dir") + File.separator + ".github" + File.separator + "workflows" + File.separator + "stop_dockergrid");
+//        Thread.sleep(20000);
     }
 }
