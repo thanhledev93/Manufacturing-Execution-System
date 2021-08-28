@@ -33,8 +33,8 @@ public class WebDriverFactory {
             cap.setBrowserName(BrowserType.FIREFOX);
             System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + File.separator + "drivers" + File.separator + "geckodriver.exe");
         }
-//        driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), cap);
-        driver = new ChromeDriver();
+        driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), cap);
+//        driver = new ChromeDriver();
 
         setDriver(driver);
         getDriver().manage().window().maximize();
