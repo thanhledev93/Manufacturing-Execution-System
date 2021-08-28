@@ -7,7 +7,7 @@ Feature: Job title
     Given User is on "Chức danh" page with account "admin" and password "123456@#"
 
 #  CREATE JOB TITLE ******************************************
-  @create @update  @delete  @revert @search @read @jenkins
+  @create @update  @delete  @revert @search @read
   Scenario Outline: Create job title successful with valid value
     When User click on create job title button
     Then Open job title form
