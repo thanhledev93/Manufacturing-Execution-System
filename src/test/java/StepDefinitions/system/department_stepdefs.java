@@ -138,7 +138,7 @@ public class department_stepdefs extends BaseClass {
         dept_Search.chooseStatus(status);
         dept_Search.clickOnSearchButton();
     }
-    @And("close browser")
+    @And("Close browser")
     public void close_browser() {
         getDriver().quit();
     }

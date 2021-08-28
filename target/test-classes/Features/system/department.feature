@@ -1,12 +1,13 @@
-@UAT_Testing
 #noinspection NonAsciiCharacters
+
+#@UAT_Testing
 Feature: Department
 
   Background:
-    Given User is on "Phòng ban" page with account "administrator" and password "123456@#"
+    Given User is on "Phòng ban" page with account "admin" and password "123456@#"
 
 #  CREATE DEPARTMENT ******************************************
-  @create @update  @delete  @revert @search
+#  @create @update  @delete  @revert @search @read
   Scenario Outline: Create department successful with valid value
     When User click on create department button
     Then Open department form
@@ -16,35 +17,35 @@ Feature: Department
     When User click on confirm button
     Then Close alert message
     And User should found department with "<name>" and "<note>" in the list
-    And close browser
+    And Close browser
     Examples:
       | name        | note             |
       | Phòng ban 1 | phòng ban 1 note |
       | Phòng ban 2 | phòng ban 2 note |
       | Phòng ban 3 | phòng ban 3 note |
 
-  @create
+#  @create
   Scenario: Create department failed with name is blank
     When User click on create department button
     Then Open department form
     When User enter note "phòng ban note"
     And User click on save button in department form
     Then Display alert message "Bắt buộc" for required values in department form
-    And close browser
+    And Close browser
 
-  @create
+#  @create
   Scenario Outline: Create department failed with name already exist
     When User click on create department button
     Then Open department form
     When User enter department name "<name>" and note "<note>"
     And User click on save button in department form
     Then Display alert message "Đã tồn tại" for required values in department form
-    And close browser
+    And Close browser
     Examples:
       | name        | note             |
       | Phòng ban 1 | phòng ban 1 note |
 
-  @create
+#  @create
   Scenario Outline: Create department failed when canceling create operation
     When User click on create department button
     Then Open department form
@@ -52,14 +53,14 @@ Feature: Department
     When User click on close button in department form
     Then Close department form
     And User should not found department with "<name>" and "<note>" in the list
-    And close browser
+    And Close browser
     Examples:
       | name        | note             |
       | Phòng ban 4 | phòng ban 4 note |
 
 
 # READ DEPARTMENT ******************************************
-  @read
+#  @read
   Scenario Outline: Read department
     When User choose department "<name>" and choose view
     Then Open department form
@@ -67,14 +68,14 @@ Feature: Department
     And Department form fields "<name>" and "<note>" are loaded by default
     When User click on close button in department form
     Then Close department form
-    And close browser
+    And Close browser
 
     Examples:
       | name        | note             |
       | Phòng ban 1 | phòng ban 1 note |
 
 # DELETE DEPARTMENT
-  @delete @revert
+#  @delete @revert
   Scenario Outline: Delete department
     When When user choose department "<name>" and choose delete
     Then Display alert message as "Bạn có chắc không"
@@ -83,25 +84,25 @@ Feature: Department
     When User click on confirm button
     Then Close alert message
     And User should not found department with "<name>" and "<note>" in the list
-    And close browser
+    And Close browser
     Examples:
       | name        | note             |
       | Phòng ban 1 | phòng ban 1 note |
 
-  @delete
+#  @delete
   Scenario Outline: Delete failed when canceling create operation
     When When user choose department "<name>" and choose delete
     Then Display alert message as "Bạn có chắc không"
     When User click on no button
     Then Close alert message
     And User should found department with "<name>" and "<note>" in the list
-    And close browser
+    And Close browser
     Examples:
       | name        | note             |
       | Phòng ban 2 | phòng ban 2 note |
 
 # REVERT DEPARTMENT
-  @revert
+#  @revert
   Scenario Outline: Revert department
     Given User has an unused department
     When User choose department "<name>" and choose revert
@@ -112,20 +113,20 @@ Feature: Department
       | Phòng ban 1 | phòng ban 1 note |
 
 # SEARCH DEPARTMENT
-  @search
+#  @search
   Scenario Outline: Search department with invalid value
     When User search a department with "<name>" and "<status>"
     Then User should not found department with "<name>" and "<note>" in the list
-    And close browser
+    And Close browser
     Examples:
       | name        | note            | status        |
       | inValid     | invalid note    | Sử dụng       |
 
-  @search
+#  @search
   Scenario Outline: Search department with valid value
     When User search a department with "<name>" and "<status>"
     Then User should found department with "<name>" and "<note>" in the list
-    And close browser
+    And Close browser
 
     Examples:
       | name            | note                | status        |
@@ -133,7 +134,7 @@ Feature: Department
       | Phòng ban 2     | phòng ban 2 note    | Sử dụng       |
 
 #  UPDATE DEPARTMENT ******************************************
-  @update
+#  @update
   Scenario Outline: Update department successful with valid value
     When User choose department "<name>" and choose update
     Then Open department form
@@ -144,12 +145,12 @@ Feature: Department
     When User click on confirm button
     Then Close alert message
     And User should found department with "<name_updated>" and "<note_updated>" in the list
-    And close browser
+    And Close browser
     Examples:
       | name        | note             | name_updated            | note_updated               |
       | Phòng ban 1 | phòng ban 1 note | Phòng ban 1 - updated   | phòng ban 1 note - updated |
 
-  @update
+#  @update
   Scenario Outline: Update department failed with name is blank
     When User choose department "<name>" and choose update
     Then Open department form
@@ -163,7 +164,7 @@ Feature: Department
       | name        | note             | note_updated               |
       | Phòng ban 2 | phòng ban 2 note | phòng ban 2 note - updated |
 
-  @update
+#  @update
   Scenario Outline: Update department failed with name already exist
     When User choose department "<name>" and choose update
     Then Open department form
@@ -175,7 +176,7 @@ Feature: Department
       | name        | note             | name_updated    | note_updated               |
       | Phòng ban 3 | phòng ban 3 note | Phòng ban 2     | phòng ban 2 note - updated |
 
-  @update
+#  @update
   Scenario Outline: Update when no change value
     When User choose department "<name>" and choose update
     Then Open department form
@@ -185,12 +186,12 @@ Feature: Department
     When User click on confirm button
     Then Close alert message
     And User should found department with "<name>" and "<note>" in the list
-    And close browser
+    And Close browser
     Examples:
       | name        | note             |
       | Phòng ban 3 | phòng ban 3 note |
 
-  @update
+#  @update
   Scenario Outline: Update failed when canceling create operation
     When User choose department "<name>" and choose update
     Then Open department form
@@ -198,7 +199,7 @@ Feature: Department
     When User enter department name "<name_updated>" and note "<note_updated>"
     And User click on close button in department form
     And User should not found department with "<name_updated>" and "<note_updated>" in the list
-    And close browser
+    And Close browser
     Examples:
       | name        | note             | name_updated            | note_updated               |
       | Phòng ban 3 | phòng ban 3 note | Phòng ban 3 - updated   | phòng ban 3 note - updated |

@@ -17,6 +17,9 @@ import pageObjects.BaseObjectPage;
 import pageObjects.sys.department.Department_CreateFormPage;
 import pageObjects.sys.department.Department_MainTablePage;
 import pageObjects.sys.department.Department_SearchFormPage;
+import pageObjects.sys.job_title.JobTitle_CreateFormPage;
+import pageObjects.sys.job_title.JobTitle_MainTablePage;
+import pageObjects.sys.job_title.JobTitle_SearchFormPage;
 import runner.WebDriverFactory;
 
 import java.io.File;
@@ -37,6 +40,11 @@ public class BaseClass extends WebDriverFactory {
     public Department_MainTablePage dept_mainTable;
     public Department_SearchFormPage dept_Search;
     public Department_CreateFormPage dept_createForm;
+
+    // Job title
+    public JobTitle_MainTablePage jobt_mainTable;
+    public JobTitle_SearchFormPage jobt_search;
+    public JobTitle_CreateFormPage jobt_create;
 
 
     //Create for generating random string for Unique email

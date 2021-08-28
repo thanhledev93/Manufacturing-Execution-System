@@ -54,7 +54,6 @@ public class BaseObjectPage extends BaseClass {
     WebElement btnReturn;
 
 
-
     public WebElement getHeaderPage() {
         return lblHeaderPage;
     }

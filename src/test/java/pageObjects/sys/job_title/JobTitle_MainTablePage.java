@@ -1,4 +1,4 @@
-package pageObjects.sys.department;
+package pageObjects.sys.job_title;
 
 import StepDefinitions.BaseClass;
 import org.openqa.selenium.By;
@@ -8,13 +8,13 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class Department_MainTablePage extends BaseClass {
-    public Department_MainTablePage() {
+public class JobTitle_MainTablePage extends BaseClass {
+    public JobTitle_MainTablePage() {
         PageFactory.initElements(getDriver(), this);
     }
 
     // Begin Find Elements
-    @FindBy(xpath = "//sys_department_index//div[2]//table")
+    @FindBy(xpath = "//sys_job_title_index//div[2]//table")
     WebElement tblMainTable;
 
     @FindBy(xpath = "//table//tbody//tr[contains(@class, 'ng-star-inserted')]")
@@ -32,13 +32,13 @@ public class Department_MainTablePage extends BaseClass {
     @FindBy(xpath = "//button[contains(@transloco,'system.revert')]")
     WebElement btnRevert;
 
-    @FindBy(xpath = "//sys_department_index//select")
+    @FindBy(xpath = "//select")
     WebElement slViewNumber;
 
     // End Find Elements
 
     public void clickOnFeatureButtonInFirstRow() {
-            WebElement btnFeature = tblMainTable.findElement(By.xpath("//sys_department_index[1]/div[1]/div[1]/div[1]/mat-card[2]/div[1]/div[1]/div[3]/div[2]/table[1]/tbody[1]/tr[1]/td[1]/button[1]"));
+            WebElement btnFeature = tblMainTable.findElement(By.xpath("//sys_job_title_index[1]/div[1]/div[1]/div[1]/mat-card[2]/div[1]/div[1]/div[3]/div[2]/table[1]/tbody[1]/tr[1]/td[1]/button[1]"));
             clickOn(getDriver(), btnFeature);
     }
 
@@ -55,13 +55,12 @@ public class Department_MainTablePage extends BaseClass {
         clickOn(getDriver(), btnRevert);
     }
 
-    public boolean verifyDepartmentIsDisplayedInTheList(String name, String note) throws InterruptedException {
+    public boolean verifyJobTitleIsDisplayedInTheList(String name, String note) throws InterruptedException {
         selectValueFromDropDown(slViewNumber, "100");
         Thread.sleep(1000);
         for (int i=1; i<=tblRows.size(); i++) {
             String tblname = getDriver().findElement(By.xpath("//table//tbody//tr[contains(@class, 'ng-star-inserted')][" + i + "]//td[3]")).getText();
             String tblnote = getDriver().findElement(By.xpath("//table//tbody//tr[contains(@class, 'ng-star-inserted')][" + i + "]//td[6]")).getText();
-
             if (name.equalsIgnoreCase(tblname) && note.equalsIgnoreCase(tblnote)) {
                 return true;
             }
