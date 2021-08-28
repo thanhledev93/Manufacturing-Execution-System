@@ -15,7 +15,7 @@ import java.io.IOException;
         dryRun = false,
         monochrome = true,
         glue = {"StepDefinitions"},
-        tags = "@jenkins"
+        tags = "@UAT_Testing"
 )
 public class RunCucumberTest extends AbstractTestNGCucumberTests{
     @BeforeSuite
