@@ -20,10 +20,10 @@ Feature: Department
     And User should found department with "<name>" and "<note>" in the list
     And Close browser
     Examples:
-      | name        | note             |
-      | Phòng ban 1 | phòng ban 1 note |
-      | Phòng ban 2 | phòng ban 2 note |
-      | Phòng ban 3 | phòng ban 3 note |
+      | name        | note      |
+      | Phòng ban 1 | dept note |
+      | Phòng ban 2 | dept note |
+      | Phòng ban 3 | dept note |
 
 #  @create
   @jenkins
@@ -45,8 +45,8 @@ Feature: Department
     Then Display alert message "Đã tồn tại" for required values in department form
     And Close browser
     Examples:
-      | name        | note             |
-      | Phòng ban 1 | phòng ban 1 note |
+      | name        | note      |
+      | Phòng ban 1 | dept note |
 
 #  @create
   @jenkins
@@ -59,8 +59,8 @@ Feature: Department
     And User should not found department with "<name>" and "<note>" in the list
     And Close browser
     Examples:
-      | name        | note             |
-      | Phòng ban 4 | phòng ban 4 note |
+      | name        | note      |
+      | Phòng ban 4 | dept note |
 
 
 # READ DEPARTMENT ******************************************
@@ -75,8 +75,8 @@ Feature: Department
     And Close browser
 
     Examples:
-      | name        | note             |
-      | Phòng ban 1 | phòng ban 1 note |
+      | name        | note        |
+      | Phòng ban 1 | dept note   |
 
 # DELETE DEPARTMENT
 #  @delete @revert
@@ -90,8 +90,8 @@ Feature: Department
     And User should not found department with "<name>" and "<note>" in the list
     And Close browser
     Examples:
-      | name        | note             |
-      | Phòng ban 1 | phòng ban 1 note |
+      | name        | note        |
+      | Phòng ban 1 | dept note   |
 
 #  @delete
   Scenario Outline: Delete failed when canceling create operation
@@ -102,8 +102,8 @@ Feature: Department
     And User should found department with "<name>" and "<note>" in the list
     And Close browser
     Examples:
-      | name        | note             |
-      | Phòng ban 2 | phòng ban 2 note |
+      | name        | note      |
+      | Phòng ban 2 | dept note |
 
 # REVERT DEPARTMENT
 #  @revert
@@ -113,8 +113,8 @@ Feature: Department
     And User choose use status as "Sử dụng"
     Then User should found department with "<name>" and "<note>" in the list
     Examples:
-      | name        | note             |
-      | Phòng ban 1 | phòng ban 1 note |
+      | name        | note      |
+      | Phòng ban 1 | dept note |
 
 # SEARCH DEPARTMENT
 #  @search
@@ -123,8 +123,8 @@ Feature: Department
     Then User should not found department with "<name>" and "<note>" in the list
     And Close browser
     Examples:
-      | name        | note            | status        |
-      | inValid     | invalid note    | Sử dụng       |
+      | name        | note          | status        |
+      | inValid     | dept note     | Sử dụng       |
 
 #  @search
   Scenario Outline: Search department with valid value
@@ -133,9 +133,9 @@ Feature: Department
     And Close browser
 
     Examples:
-      | name            | note                | status        |
-      | Phòng ban 1     | phòng ban 1 note    | Sử dụng       |
-      | Phòng ban 2     | phòng ban 2 note    | Sử dụng       |
+      | name            | note          | status        |
+      | Phòng ban 1     | dept note     | Sử dụng       |
+      | Phòng ban 2     | dept note     | Sử dụng       |
 
 #  UPDATE DEPARTMENT ******************************************
 #  @update
@@ -151,8 +151,8 @@ Feature: Department
     And User should found department with "<name_updated>" and "<note_updated>" in the list
     And Close browser
     Examples:
-      | name        | note             | name_updated            | note_updated               |
-      | Phòng ban 1 | phòng ban 1 note | Phòng ban 1 - updated   | phòng ban 1 note - updated |
+      | name        | note      | name_updated            | note_updated         |
+      | Phòng ban 1 | dept note | Phòng ban 1 - updated   | dept note  - updated |
 
 #  @update
   Scenario Outline: Update department failed with name is blank
@@ -165,8 +165,8 @@ Feature: Department
     Then Display alert message "Bắt buộc" for required values in department form
 
     Examples:
-      | name        | note             | note_updated               |
-      | Phòng ban 2 | phòng ban 2 note | phòng ban 2 note - updated |
+      | name        | note       | note_updated        |
+      | Phòng ban 2 | dept note  | dept note - updated |
 
 #  @update
   Scenario Outline: Update department failed with name already exist
@@ -177,8 +177,8 @@ Feature: Department
     And User click on save button in department form
     Then Display alert message "Đã tồn tại" for required values in department form
     Examples:
-      | name        | note             | name_updated    | note_updated               |
-      | Phòng ban 3 | phòng ban 3 note | Phòng ban 2     | phòng ban 2 note - updated |
+      | name        | note             | name_updated    | note_updated        |
+      | Phòng ban 3 | dept note        | Phòng ban 2     | dept note - updated |
 
 #  @update
   Scenario Outline: Update when no change value
@@ -192,8 +192,8 @@ Feature: Department
     And User should found department with "<name>" and "<note>" in the list
     And Close browser
     Examples:
-      | name        | note             |
-      | Phòng ban 3 | phòng ban 3 note |
+      | name        | note       |
+      | Phòng ban 3 | dept note  |
 
 #  @update
   Scenario Outline: Update failed when canceling create operation
@@ -205,5 +205,5 @@ Feature: Department
     And User should not found department with "<name_updated>" and "<note_updated>" in the list
     And Close browser
     Examples:
-      | name        | note             | name_updated            | note_updated               |
-      | Phòng ban 3 | phòng ban 3 note | Phòng ban 3 - updated   | phòng ban 3 note - updated |
+      | name        | note       | name_updated            | note_updated        |
+      | Phòng ban 3 | dept note  | Phòng ban 3 - updated   | dept note - updated |

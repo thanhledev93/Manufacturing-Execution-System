@@ -1,6 +1,6 @@
 #noinspection NonAsciiCharacters
 
-#@UAT_Testing
+@UAT_Testing
 Feature: Department
 
   Background:
@@ -8,6 +8,7 @@ Feature: Department
 
 #  CREATE DEPARTMENT ******************************************
 #  @create @update  @delete  @revert @search @read
+  @jenkins
   Scenario Outline: Create department successful with valid value
     When User click on create department button
     Then Open department form
@@ -25,6 +26,7 @@ Feature: Department
       | Phòng ban 3 | phòng ban 3 note |
 
 #  @create
+  @jenkins
   Scenario: Create department failed with name is blank
     When User click on create department button
     Then Open department form
@@ -34,6 +36,7 @@ Feature: Department
     And Close browser
 
 #  @create
+  @jenkins
   Scenario Outline: Create department failed with name already exist
     When User click on create department button
     Then Open department form
@@ -46,6 +49,7 @@ Feature: Department
       | Phòng ban 1 | phòng ban 1 note |
 
 #  @create
+  @jenkins
   Scenario Outline: Create department failed when canceling create operation
     When User click on create department button
     Then Open department form

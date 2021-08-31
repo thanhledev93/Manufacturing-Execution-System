@@ -140,4 +140,17 @@ public class jobtitle_stepdefs extends BaseClass {
         jobt_search.chooseStatus(status);
         jobt_search.clickOnSearchButton();
     }
+
+    @When("User choose job title {string} and choose update")
+    public void user_choose_job_title_and_choose_update(String name) {
+        jobt_search.enterJobTitleName(name);
+        jobt_search.clickOnSearchButton();
+        jobt_mainTable.clickOnFeatureButtonInFirstRow();
+        jobt_mainTable.clickOnEditButton();
+    }
+    @When("User clear job title name")
+    public void user_clear_job_title_name() {
+        jobt_create.clearName();
+    }
+
 }

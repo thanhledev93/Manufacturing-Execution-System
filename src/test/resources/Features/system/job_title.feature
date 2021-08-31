@@ -20,9 +20,9 @@ Feature: Job title
     And  Close browser
     Examples:
       | name                     | note           |
-      | Phụ trách kho 1          | jobt note      |
-      | Nhân viên kho 1          | jobt note      |
       | Phụ trách bảo trì 1      | jobt note      |
+      | Phụ trách bảo trì 2      | jobt note      |
+      | Phụ trách bảo trì 3      | jobt note      |
 
   @create
   Scenario: Create job title failed with name is blank
@@ -42,8 +42,8 @@ Feature: Job title
     Then Display alert message "Đã tồn tại" for required values in job title form
     And Close browser
     Examples:
-      | name              | note      |
-      | Phụ trách kho 1   | jobt note |
+      | name                  | note      |
+      | Phụ trách bảo trì 1   | jobt note |
 
   @create
   Scenario Outline: Create job title failed when canceling create operation
@@ -55,8 +55,8 @@ Feature: Job title
     And User should not found job title with "<name>" and "<note>" in the list
     And Close browser
     Examples:
-      | name              | note      |
-      | Quản đốc xưởng    | jobt note |
+      | name                   | note      |
+      | Phụ trách bảo trì 4    | jobt note |
 
 
 # READ JOB TITLE ******************************************
@@ -71,13 +71,12 @@ Feature: Job title
     And Close browser
 
     Examples:
-      | name              | note       |
-      | Phụ trách kho 1   | jobt note  |
+      | name                  | note       |
+      | Phụ trách bảo trì 1   | jobt note  |
 
 
 
 # DELETE JOB TITLE
-
 
   @delete @revert
   Scenario Outline: Delete job title
@@ -90,9 +89,9 @@ Feature: Job title
     And User should not found job title with "<name>" and "<note>" in the list
     And Close browser
     Examples:
-      | name                    | note           |
-      | Phụ trách kho 1         | jobt note      |
-      | Nhân viên kho 1         | jobt note      |
+      | name                        | note           |
+      | Phụ trách bảo trì 1         | jobt note      |
+      | Phụ trách bảo trì 2         | jobt note      |
 
   @delete
   Scenario Outline: Delete failed when canceling create operation
@@ -104,7 +103,7 @@ Feature: Job title
     And Close browser
     Examples:
       | name                     | note             |
-      | Phụ trách bảo trì 1      | jobt note        |
+      | Phụ trách bảo trì 3      | jobt note        |
 
 # REVERT JOB TITLE
   @revert
@@ -114,11 +113,22 @@ Feature: Job title
     And User choose use status "Sử dụng" for job title
     Then User should found job title with "<name>" and "<note>" in the list
     Examples:
-      | name                     | note           |
-      | Phụ trách kho 1          | jobt note      |
-      | Nhân viên kho 1          | jobt note      |
+      | name                         | note           |
+      | Phụ trách bảo trì 1          | jobt note      |
+      | Phụ trách bảo trì 2          | jobt note      |
 
     # SEARCH JOB TITLE
+  @search
+  Scenario Outline: Search department with valid value
+    When User search a job title with "<name>" and "<status>"
+    Then User should found job title with "<name>" and "<note>" in the list
+    And Close browser
+
+    Examples:
+      | name                    | note         | status        |
+      | Phụ trách bảo trì 1     | jobt note    | Sử dụng       |
+      | Phụ trách bảo trì 2     | jobt note    | Sử dụng       |
+
   @search
   Scenario Outline: Search job title with invalid value
     When User search a job title with "<name>" and "<status>"
@@ -128,13 +138,75 @@ Feature: Job title
       | name        | note            | status        |
       | inValid     | invalid note    | Sử dụng       |
 
-  @search
-  Scenario Outline: Search department with valid value
-    When User search a job title with "<name>" and "<status>"
-    Then User should found job title with "<name>" and "<note>" in the list
+
+
+#  UPDATE JOB TITLE ******************************************
+  @update
+  Scenario Outline: Update job title successful with valid value
+    When User choose job title "<name>" and choose update
+    Then Open job title form
+    And Job title form fields "<name>" and "<note>" are loaded by default
+    When User enter job title name "<name_updated>" and note "<note_updated>"
+    And User click on save button in job title form
+    Then Display alert message "Lưu thành công"
+    When User click on confirm button
+    Then Close alert message
+    And User should found job title with "<name_updated>" and "<note_updated>" in the list
     And Close browser
+    Examples:
+      | name                | note        | name_updated                    | note_updated        |
+      | Phụ trách bảo trì 1 | jobt note   | Phụ trách bảo trì 1 - updated   | jobt note - updated |
+
+  @update
+  Scenario Outline: Update job title failed with name is blank
+    When User choose job title "<name>" and choose update
+    Then Open job title form
+    And Job title form fields "<name>" and "<note>" are loaded by default
+    When User clear job title name
+    When User enter job title note "<note_updated>"
+    And User click on save button in job title form
+    Then Display alert message "Bắt buộc" for required values in job title form
 
     Examples:
-      | name                | note         | status        |
-      | Phụ trách kho 1     | jobt note    | Sử dụng       |
-      | Nhân viên kho 1     | jobt note    | Sử dụng       |
+      | name                | note             | note_updated        |
+      | Phụ trách bảo trì 2 | jobt note        | jobt note - updated |
+
+  @update
+  Scenario Outline: Update job title failed with name already exist
+    When User choose job title "<name>" and choose update
+    Then Open job title form
+    And Job title form fields "<name>" and "<note>" are loaded by default
+    When User enter job title name "<name_updated>" and note "<note_updated>"
+    And User click on save button in job title form
+    Then Display alert message "Đã tồn tại" for required values in job title form
+    Examples:
+      | name                | note        | name_updated            | note_updated    |
+      | Phụ trách bảo trì 3 | jobt note   | Phụ trách bảo trì 2     | jobt note       |
+
+  @update
+  Scenario Outline: Update when no change value
+    When User choose job title "<name>" and choose update
+    Then Open job title form
+    And Job title form fields "<name>" and "<note>" are loaded by default
+    And User click on save button in job title form
+    Then Display alert message "Lưu thành công"
+    When User click on confirm button
+    Then Close alert message
+    And User should found job title with "<name>" and "<note>" in the list
+    And Close browser
+    Examples:
+      | name                | note        |
+      | Phụ trách bảo trì 3 | jobt note   |
+
+  @update
+  Scenario Outline: Update failed when canceling create operation
+    When User choose job title "<name>" and choose update
+    Then Open job title form
+    And Job title form fields "<name>" and "<note>" are loaded by default
+    When User enter job title name "<name_updated>" and note "<note_updated>"
+    And User click on close button in job title form
+    And User should not found job title with "<name_updated>" and "<note_updated>" in the list
+    And Close browser
+    Examples:
+      | name                | note       | name_updated                    | note_updated        |
+      | Phụ trách bảo trì 3 | jobt note  | Phụ trách bảo trì 3 - updated   | jobt note - updated |
