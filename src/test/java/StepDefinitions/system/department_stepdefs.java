@@ -177,6 +177,7 @@ public class department_stepdefs extends BaseClass {
         boolean isDisplay = baseObjectPage.verifyAlertMes(mes);
         Assert.assertTrue(isDisplay, "The message is not displayed");
     }
+    // t
     @When("User click on yes button")
     public void user_click_on_yes_button() {
         baseObjectPage.clickOnConfirmAlertMes();

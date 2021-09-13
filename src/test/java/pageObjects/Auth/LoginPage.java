@@ -4,7 +4,6 @@ import StepDefinitions.BaseClass;
 import org.testng.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -17,28 +16,22 @@ public class LoginPage extends BaseClass {
     }
 
     @FindBy(xpath = "//mat-form-field[1]/div[1]/div[1]/div[1]/input[1]")
-    @CacheLookup
     WebElement txtUsername;
 
     @FindBy(xpath = "//mat-form-field[2]/div[1]/div[1]/div[1]/input[1]")
-    @CacheLookup
     WebElement txtPassword;
 
     @FindBy(xpath = "//form[1]/button[1]")
-    @CacheLookup
     WebElement btnLogin;
 
 
     @FindBy(xpath = "//user-menu[1]/button[1]/span[1]/span[1]/mat-icon[1]")
-    @CacheLookup
     WebElement btnUser;
 
     @FindBy(xpath = "//body[1]/div[2]/div[2]/div[1]/div[1]/div[1]/button[5]")
-    @CacheLookup
     WebElement btnLogout;
 
     @FindBy(xpath = "//mat-error[1]")
-    @CacheLookup
     List<WebElement> msgEr;
 
     public void setUsername(String uname) {

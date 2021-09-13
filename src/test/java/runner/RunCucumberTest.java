@@ -5,7 +5,6 @@ import io.cucumber.testng.CucumberOptions;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
-
 import java.io.File;
 import java.io.IOException;
 

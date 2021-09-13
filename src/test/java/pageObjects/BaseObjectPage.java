@@ -2,6 +2,7 @@ package pageObjects;
 
 import StepDefinitions.BaseClass;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -19,10 +20,10 @@ public class BaseObjectPage extends BaseClass {
     @FindBy(xpath = "//h2[1]")
     WebElement alertBoxContains;
 
-    @FindBy(xpath = "//body[1]/div[4]/div[1]/div[3]/button[1]")
+    @FindBy(xpath = "//button[contains(text(),'Có')]")
     WebElement btnAlertBoxConfirm;
 
-    @FindBy(xpath = "//body[1]/div[4]/div[1]/div[3]/button[contains(text(), 'Đóng') or contains(text(), 'OK') or contains(text(), 'Không')]")
+    @FindBy(xpath = "//button[contains(text(), 'Đóng') or contains(text(), 'OK') or contains(text(), 'Không')]")
     WebElement btnAlertBoxClose;
 
     //body[1]/div[3]/div[4]/div[1]/mat-dialog-container[1]

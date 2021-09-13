@@ -1,6 +1,6 @@
 #noinspection NonAsciiCharacters
 
-@UAT_Testing
+#@UAT_Testing
 Feature: Department
 
   Background:
@@ -8,7 +8,7 @@ Feature: Department
 
 #  CREATE DEPARTMENT ******************************************
 #  @create @update  @delete  @revert @search @read
-  @jenkins
+  @update_dept
   Scenario Outline: Create department successful with valid value
     When User click on create department button
     Then Open department form
@@ -20,13 +20,12 @@ Feature: Department
     And User should found department with "<name>" and "<note>" in the list
     And Close browser
     Examples:
-      | name        | note             |
-      | Phòng ban 1 | phòng ban 1 note |
-      | Phòng ban 2 | phòng ban 2 note |
-      | Phòng ban 3 | phòng ban 3 note |
+      | name       | note      |
+      | Kinh doanh | dept note |
+#      | Mua hàng   | dept note |
+#      | Bảo trì    | dept note |
 
 #  @create
-  @jenkins
   Scenario: Create department failed with name is blank
     When User click on create department button
     Then Open department form
@@ -36,7 +35,6 @@ Feature: Department
     And Close browser
 
 #  @create
-  @jenkins
   Scenario Outline: Create department failed with name already exist
     When User click on create department button
     Then Open department form
@@ -45,11 +43,10 @@ Feature: Department
     Then Display alert message "Đã tồn tại" for required values in department form
     And Close browser
     Examples:
-      | name        | note             |
-      | Phòng ban 1 | phòng ban 1 note |
+      | name        | note      |
+      | Kinh doanh  | dept note |
 
 #  @create
-  @jenkins
   Scenario Outline: Create department failed when canceling create operation
     When User click on create department button
     Then Open department form
@@ -59,8 +56,8 @@ Feature: Department
     And User should not found department with "<name>" and "<note>" in the list
     And Close browser
     Examples:
-      | name        | note             |
-      | Phòng ban 4 | phòng ban 4 note |
+      | name        | note      |
+      | Kho         | dept note |
 
 
 # READ DEPARTMENT ******************************************
@@ -75,8 +72,8 @@ Feature: Department
     And Close browser
 
     Examples:
-      | name        | note             |
-      | Phòng ban 1 | phòng ban 1 note |
+      | name        | note        |
+      | Kinh doanh | dept note    |
 
 # DELETE DEPARTMENT
 #  @delete @revert
@@ -90,8 +87,8 @@ Feature: Department
     And User should not found department with "<name>" and "<note>" in the list
     And Close browser
     Examples:
-      | name        | note             |
-      | Phòng ban 1 | phòng ban 1 note |
+      | name        | note        |
+      | Kinh doanh  | dept note   |
 
 #  @delete
   Scenario Outline: Delete failed when canceling create operation
@@ -102,8 +99,8 @@ Feature: Department
     And User should found department with "<name>" and "<note>" in the list
     And Close browser
     Examples:
-      | name        | note             |
-      | Phòng ban 2 | phòng ban 2 note |
+      | name        | note      |
+      | Mua hàng    | dept note |
 
 # REVERT DEPARTMENT
 #  @revert
@@ -113,8 +110,8 @@ Feature: Department
     And User choose use status as "Sử dụng"
     Then User should found department with "<name>" and "<note>" in the list
     Examples:
-      | name        | note             |
-      | Phòng ban 1 | phòng ban 1 note |
+      | name        | note        |
+      | Kinh doanh  | dept note   |
 
 # SEARCH DEPARTMENT
 #  @search
@@ -123,8 +120,8 @@ Feature: Department
     Then User should not found department with "<name>" and "<note>" in the list
     And Close browser
     Examples:
-      | name        | note            | status        |
-      | inValid     | invalid note    | Sử dụng       |
+      | name        | note          | status        |
+      | inValid     | dept note     | Sử dụng       |
 
 #  @search
   Scenario Outline: Search department with valid value
@@ -133,9 +130,8 @@ Feature: Department
     And Close browser
 
     Examples:
-      | name            | note                | status        |
-      | Phòng ban 1     | phòng ban 1 note    | Sử dụng       |
-      | Phòng ban 2     | phòng ban 2 note    | Sử dụng       |
+      | name            | note          | status        |
+      |  Kinh doanh     | dept note     | Sử dụng       |
 
 #  UPDATE DEPARTMENT ******************************************
 #  @update
@@ -151,8 +147,8 @@ Feature: Department
     And User should found department with "<name_updated>" and "<note_updated>" in the list
     And Close browser
     Examples:
-      | name        | note             | name_updated            | note_updated               |
-      | Phòng ban 1 | phòng ban 1 note | Phòng ban 1 - updated   | phòng ban 1 note - updated |
+      | name        | note      | name_updated            | note_updated         |
+      | Kinh doanh  | dept note | Kinh doanh - updated    | dept note - updated |
 
 #  @update
   Scenario Outline: Update department failed with name is blank
@@ -165,8 +161,8 @@ Feature: Department
     Then Display alert message "Bắt buộc" for required values in department form
 
     Examples:
-      | name        | note             | note_updated               |
-      | Phòng ban 2 | phòng ban 2 note | phòng ban 2 note - updated |
+      | name        | note       | note_updated        |
+      | Mua hàng    | dept note  | dept note - updated |
 
 #  @update
   Scenario Outline: Update department failed with name already exist
@@ -177,8 +173,8 @@ Feature: Department
     And User click on save button in department form
     Then Display alert message "Đã tồn tại" for required values in department form
     Examples:
-      | name        | note             | name_updated    | note_updated               |
-      | Phòng ban 3 | phòng ban 3 note | Phòng ban 2     | phòng ban 2 note - updated |
+      | name        | note        | name_updated    | note_updated        |
+      | Bảo trì     | dept note   | Mua hàng        | dept note - updated |
 
 #  @update
   Scenario Outline: Update when no change value
@@ -192,8 +188,8 @@ Feature: Department
     And User should found department with "<name>" and "<note>" in the list
     And Close browser
     Examples:
-      | name        | note             |
-      | Phòng ban 3 | phòng ban 3 note |
+      | name        | note       |
+      | Mua hàng    | dept note  |
 
 #  @update
   Scenario Outline: Update failed when canceling create operation
@@ -205,5 +201,5 @@ Feature: Department
     And User should not found department with "<name_updated>" and "<note_updated>" in the list
     And Close browser
     Examples:
-      | name        | note             | name_updated            | note_updated               |
-      | Phòng ban 3 | phòng ban 3 note | Phòng ban 3 - updated   | phòng ban 3 note - updated |
+      | name        | note       | name_updated        | note_updated        |
+      | Bảo trì     | dept note  | Bảo trì - updated   | dept note - updated |
