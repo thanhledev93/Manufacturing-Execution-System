@@ -1,6 +1,6 @@
 #noinspection NonAsciiCharacters
 
-@UAT_Testing
+#@UAT_Testing
 Feature: Department
 
   Background:
