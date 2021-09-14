@@ -8,7 +8,7 @@ Feature: Job title
 
 #  CREATE JOB TITLE ******************************************
 ###  @create @update  @delete  @revert @search @read
-  @update_jobt
+  @update
   Scenario Outline: Create job title successful with valid value
     When User click on create job title button
     Then Open job title form
@@ -139,7 +139,7 @@ Feature: Job title
 
 
 #  UPDATE JOB TITLE ******************************************
-#  @update
+  @update
   Scenario Outline: Update job title successful with valid value
     When User choose job title "<name>" and choose update
     Then Open job title form
@@ -155,7 +155,7 @@ Feature: Job title
       | name                    | note         | name_updated                    | note_updated        |
       | Quản trị hệ thống       | jobt note    | Quản trị hệ thống - update      | jobt note - update  |
 
-#  @update
+  @update
   Scenario Outline: Update job title failed with name is blank
     When User choose job title "<name>" and choose update
     Then Open job title form
@@ -169,7 +169,7 @@ Feature: Job title
       | name                | note           | note_updated        |
       | Giám đốc nhà máy    | jobt note      | jobt note - updated |
 
-#  @update
+  @update
   Scenario Outline: Update job title failed with name already exist
     When User choose job title "<name>" and choose update
     Then Open job title form
@@ -181,7 +181,7 @@ Feature: Job title
       | name                | note        | name_updated         | note_updated    |
       | Phụ trách mua hàng  | jobt note   | Giám đốc nhà máy     | jobt note       |
 
-  @update_jobt
+  @update
   Scenario Outline: Update when no change value
     When User choose job title "<name>" and choose update
     Then Open job title form
@@ -196,7 +196,7 @@ Feature: Job title
       | name                | note        |
       |  Giám đốc nhà máy   | jobt note   |
 
-#  @update
+  @update
   Scenario Outline: Update failed when canceling create operation
     When User choose job title "<name>" and choose update
     Then Open job title form
