@@ -14,7 +14,7 @@ import java.io.IOException;
         dryRun = false,
         monochrome = true,
         glue = {"StepDefinitions"},
-        tags = "@update"
+        tags = "@create_jobt"
 )
 public class RunCucumberTest extends AbstractTestNGCucumberTests{
     @BeforeSuite

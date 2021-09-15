@@ -8,8 +8,8 @@ Feature: Job title
 
 #  CREATE JOB TITLE ******************************************
 ###  @create @update  @delete  @revert @search @read
-  @update
   Scenario Outline: Create job title successful with valid value
+    @create_jobt
     When User click on create job title button
     Then Open job title form
     When User enter job title name "<name>" and note "<note>"
@@ -22,8 +22,8 @@ Feature: Job title
     Examples:
       | name                     | note           |
       | Quản trị hệ thống        | jobt note      |
-      | Giám đốc nhà máy         | jobt note      |
-      | Phụ trách mua hàng       | jobt note      |
+#      | Giám đốc nhà máy         | jobt note      |
+#      | Phụ trách mua hàng       | jobt note      |
 
 #  @create
   Scenario: Create job title failed with name is blank
