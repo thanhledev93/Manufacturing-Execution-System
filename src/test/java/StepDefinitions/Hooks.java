@@ -18,7 +18,7 @@ public class Hooks extends BaseClass {
     }
     @AfterStep
     public void DelayAfterStep() throws InterruptedException {
-        Thread.sleep(300);
+        Thread.sleep(1000);
     }
 
     @After

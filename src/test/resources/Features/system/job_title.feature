@@ -1,6 +1,6 @@
 #noinspection NonAsciiCharacters
 
-@UAT_Testing
+#@UAT_Testing
 Feature: Job title
 
   Background:
@@ -8,7 +8,6 @@ Feature: Job title
 
 #  CREATE JOB TITLE ******************************************
 ###  @create @update  @delete  @revert @search @read
-  @create_jobt
   Scenario Outline: Create job title successful with valid value
     When User click on create job title button
     Then Open job title form
