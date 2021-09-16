@@ -22,8 +22,8 @@ Feature: Job title
     Examples:
       | name                     | note           |
       | Quản trị hệ thống        | jobt note      |
-#      | Giám đốc nhà máy         | jobt note      |
-#      | Phụ trách mua hàng       | jobt note      |
+      | Giám đốc nhà máy         | jobt note      |
+      | Phụ trách mua hàng       | jobt note      |
 
 #  @create
   Scenario: Create job title failed with name is blank
