@@ -8,8 +8,8 @@ Feature: Job title
 
 #  CREATE JOB TITLE ******************************************
 ###  @create @update  @delete  @revert @search @read
+  @create_jobt
   Scenario Outline: Create job title successful with valid value
-    @create_jobt
     When User click on create job title button
     Then Open job title form
     When User enter job title name "<name>" and note "<note>"

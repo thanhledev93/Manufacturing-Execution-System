@@ -8,7 +8,6 @@ Feature: Department
 
 #  CREATE DEPARTMENT ******************************************
 #  @create @update  @delete  @revert @search @read
-  @update_dept
   Scenario Outline: Create department successful with valid value
     When User click on create department button
     Then Open department form
@@ -22,14 +21,14 @@ Feature: Department
     Examples:
       | name       | note      |
       | Kinh doanh | dept note |
-#      | Mua hàng   | dept note |
-#      | Bảo trì    | dept note |
+      | Mua hàng   | dept note |
+      | Bảo trì    | dept note |
 
 #  @create
   Scenario: Create department failed with name is blank
     When User click on create department button
     Then Open department form
-    When User enter note "phòng ban note"
+    When User enter note "dept note"
     And User click on save button in department form
     Then Display alert message "Bắt buộc" for required values in department form
     And Close browser

@@ -1,13 +1,13 @@
 #noinspection NonAsciiCharacters
 
-@UAT_Testing
+#@UAT_Testing
 Feature: User
 
   Background:
     Given User is on "Người dùng" page with account "admin" and password "123456@#"
 
 #  CREATE USER ******************************************
-  @create @update  @delete  @revert @search @read
+#  @create @update  @delete  @revert @search @read
   Scenario Outline: Create user successful with valid value
     When User click on create user button
     Then Open user form
@@ -27,7 +27,7 @@ Feature: User
       | Võ Giáp     | Tuất      | Kinh doanh   | Nhân viên kinh doanh    | tuatvg    | 123       |
       | Lê Thị      | An        | Kho          | Phụ trách kho           | anlt      | 123       |
 
-  @create
+#  @create
   Scenario: Create user failed with username and password is blank
     When User click on create user button
     Then Open user form
@@ -38,7 +38,7 @@ Feature: User
     Then Display alert message "Bắt buộc" for required values in user form
     And Close browser
 
-  @create
+#  @create
   Scenario: Create user failed with username already exist
     When User click on create user button
     Then Open user form
@@ -49,7 +49,7 @@ Feature: User
     Then Display alert message "Đã tồn tại" for username in user form
     And Close browser
 
-  @create
+#  @create
   Scenario: Create user failed when canceling create operation
     When User click on create user button
     Then Open user form
@@ -65,7 +65,7 @@ Feature: User
 
 
 ## READ USER ******************************************
-  @read
+#  @read
   Scenario: Read job title
     When User choose username as "longdm" and choose view
     Then Open user form
@@ -79,7 +79,7 @@ Feature: User
     And Close browser
 
 ## DELETE USER
-  @delete
+#  @delete
   Scenario: Delete user
     When User choose username as "longdm" and choose delete
     Then Display alert message as "Bạn có chắc không"
@@ -93,7 +93,7 @@ Feature: User
 
     And Close browser
 
-  @delete
+#  @delete
   Scenario: Delete failed when canceling create operation
     When User choose username as "quandv" and choose delete
     Then Display alert message as "Bạn có chắc không"
@@ -106,7 +106,7 @@ Feature: User
 
 
 #    # SEARCH JOB TITLE
-  @search
+#  @search
   Scenario: Search user with lastname valid value
     When User search with lastname as "Quân"
     Then  User should found user in the list
@@ -115,7 +115,7 @@ Feature: User
 
     And Close browser
 
-  @search
+#  @search
   Scenario: Search user with username valid value
     When User search with username as "quandv"
     Then  User should found user in the list
@@ -124,7 +124,7 @@ Feature: User
 
     And Close browser
 
-  @search
+#  @search
   Scenario: Search user with invalid value
     When User search with lastname as "inValid"
     Then  User should not found user in the list
@@ -135,7 +135,7 @@ Feature: User
 #
 #
 ##  UPDATE USER ******************************************
-  @update
+#  @update
   Scenario: Update user successful with valid value
     When User choose username as "quandv" and choose update
     Then Open user form
@@ -154,7 +154,7 @@ Feature: User
       | Đàm Văn updated     | Quân updated     | Sản xuất   | Nhân viên sản xuất    | quandv_upt    |
     And Close browser
 
-  @update
+#  @update
   Scenario: Update user failed with name is blank
     When User choose username as "tuatvg" and choose update
     Then Open user form
@@ -165,7 +165,7 @@ Feature: User
     And User click on save button in user form
     Then Display alert message "Bắt buộc" for required values in user form
 #
-  @update
+#  @update
   Scenario: Update user failed with name already exist
     When User choose username as "tuatvg" and choose update
     Then Open user form
@@ -177,7 +177,7 @@ Feature: User
     And User click on save button in user form
     Then Display alert message "Đã tồn tại" for username in user form
 
-  @update
+#  @update
   Scenario: Update user successful when no change value
     When User choose username as "tuatvg" and choose update
     Then Open user form
@@ -193,7 +193,7 @@ Feature: User
       | Võ Giáp     | Tuất      | Kinh doanh   | Nhân viên kinh doanh    | tuatvg    |
     And Close browser
 
-  @update
+#  @update
   Scenario: Update user failed when canceling create operation
     When User choose username as "tuatvg" and choose update
     Then Open user form
